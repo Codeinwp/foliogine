@@ -25,8 +25,7 @@ require( get_template_directory() . '/inc/jetpack.php' );
  * support post thumbnails.
  */
 function cwp_theme_setup() {
-	global $optionsdb;
-	$optionsdb = get_option("theme_options_optionsdb");
+	
 	require( get_template_directory() . '/admin/functions.php' );
 	
 	/**

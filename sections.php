@@ -4,9 +4,9 @@
 	* Slider section
 	*/
     $slider = 0; //don't display this section
-	
-	if(isset($optionsdb['slider_select']) && !empty($optionsdb['slider_select'])):
-		foreach($optionsdb['slider_select'] as $p):
+	$slider_select = cwp('slider_select');
+	if(isset($slider_select) && !empty($slider_select)):
+		foreach($slider_select as $p):
 			if($id == $p):
 				$slider = 1; //display the section on this page
 				break;
@@ -21,9 +21,9 @@
 	* Featured work section
 	*/
     $featured = 0; //don't display this section
-	
-	if(isset($optionsdb['featured_select']) && !empty($optionsdb['featured_select'])):
-		foreach($optionsdb['featured_select'] as $p):
+	$featured_select = cwp('featured_select');
+	if(isset($featured_select) && !empty($featured_select)):
+		foreach($featured_select as $p):
 			if($id == $p):
 				$featured = 1; //display the section on this page
 				break;
@@ -43,9 +43,9 @@
 	* Our services
 	*/
 	$services = 0; //don't display this section
-	
-	if(isset($optionsdb['services_select']) && !empty($optionsdb['services_select'])):
-		foreach($optionsdb['services_select'] as $p):
+	$services_select = cwp('services_select');
+	if(isset($services_select) && !empty($services_select)):
+		foreach($services_select as $p):
 			if($id == $p):
 				$services = 1; //display the section on this page
 				break;
@@ -54,16 +54,15 @@
 	endif;
 	if($services == 1):
         get_template_part('/inc/our-services');
-	endif;
-	
+	endif;
     /*
 	* Our team section(theme options)
 	*/
 
 	$team = 0; //don't display this section
-	
-	if(isset($optionsdb['team_select']) && !empty($optionsdb['team_select'])):
-		foreach($optionsdb['team_select'] as $p):
+	$team_select = cwp('team_select');
+	if(isset($team_select) && !empty($team_select)):
+		foreach($team_select as $p):
 			if($id == $p):
 				$team = 1; //display the section on this page
 				break;
@@ -133,9 +132,9 @@
     */
 
     $broch= 0; //don't display this section
-	
-	if(isset($optionsdb['download_select']) && !empty($optionsdb['download_select'])):
-		foreach($optionsdb['download_select'] as $p):
+	$download_select = cwp('download_select');
+	if(isset($download_select) && !empty($download_select)):
+		foreach($download_select as $p):
 			if($id == $p):
 				$broch = 1; //display the section on this page
 				break;
@@ -150,9 +149,9 @@
 	* Latest work
 	*/
 	$latest = 0; //don't display this section
-	
-	if(isset($optionsdb['latest_select']) && !empty($optionsdb['latest_select'])):
-		foreach($optionsdb['latest_select'] as $p):
+	$latest_select = cwp('latest_select');
+	if(isset($latest_select) && !empty($latest_select)):
+		foreach($latest_select as $p):
 			if($id == $p):
 				$latest = 1; //display the section on this page
 				break;

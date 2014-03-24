@@ -49,22 +49,23 @@
             <?php _e('Homepage','cwp'); ?> <b class="arrow-menu"></b>
           </a>
           <a class="brand" href="<?php echo get_site_url(); ?>" title="<?php bloginfo('name'); ?>">
-          <?php
-            if(isset($optionsdb['logo']) && $optionsdb['logo'] != '') :
-                if(isset($optionsdb['logo_text']) && $optionsdb['logo_text'] != '')
-                    echo '<img src="'.$optionsdb['logo'].'" alt="'.$optionsdb['logo_text'].'">';
-                else	
-                    echo '<img src="'.$optionsdb['logo'].'" alt="'.get_bloginfo('name').'">';
+			<?php
+		  
+			$logo = cwp('logo_image');
+			$logo_text = cwp('logo_text');
+			
+			if(isset($logo) && $logo != '') :
+                if(isset($logo_text) && $logo_text != ''):
+                    echo '<img src="'.$logo.'" alt="'.$logo_text.'">';
+                else:	
+                    echo '<img src="'.$logo.'" alt="'.get_bloginfo('name').'">';
+				endif;	
             else:
-        ?>	
-                <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="Foliogine">
-        <?php		
-            endif;
-          ?>
+				echo '<img src="'.get_template_directory_uri().'/img/logo.png" alt="Foliogine">';
+			endif;
+			?>
           </a>
-          
-          
-          
+
             <nav id="site-navigation" class="main-navigation" role="navigation">
                 <?php wp_nav_menu( array( 'theme_location' => 'top_menu' ) ); ?>
             </nav><!-- #site-navigation -->
