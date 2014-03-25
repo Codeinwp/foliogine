@@ -12,8 +12,13 @@
  */
 ?>
 <?php get_header(); ?>
-<?php global  $optionsdb; ?>
-
+<?php 
+	$date = cwp('date');
+	$the_author = cwp('author');
+	$the_category = cwp('category');
+	$tags = cwp('tags');
+	$featured_image = cwp('featured_image');
+?>
 <section class="title-page-area">
 	<div class="container">
 
@@ -32,16 +37,16 @@
 			<div class="list-post-box">
 				<div class="list-post-info">
 				<?php
-					if(isset($optionsdb['date']) && $optionsdb['date'] == 'Show') {
+					if(isset($date) && $date == 'show') {
 						$d = get_the_date('F j Y','','',false);
 						$dt = get_the_date('Y-m-d','','',false);
 						echo '<time datetime="'.$dt.'"><span>'.$d.'</span></time>';
 					}	
-					if(isset($optionsdb['author']) && $optionsdb['author'] == 'Show') {
+					if(isset($the_author) && $the_author == 'show') {
 						$author = get_the_author();
 						echo '<p class="hidden-tablet"><span>'.__('Posted by','cwp').'</span><a href="'.get_author_posts_url( get_the_author_meta( 'ID' )).'">'.$author.'</a></p>';
 					}
-					if(isset($optionsdb['category']) && $optionsdb['category'] == 'Show') {
+					if(isset($the_category) && $the_category == 'show') {
 						
 						$category = get_the_category();
 						$cats = get_the_category($post->ID); 
@@ -52,7 +57,7 @@
 						    echo '<a href="'.get_category_link($category[0]->cat_ID).'">'.$tmp.'</a></p>';
                         }    
 					}
-					if(isset($optionsdb['tags']) && $optionsdb['tags'] == 'Show' && has_tag()) {
+					if(isset($tags) && $tags == 'show' && has_tag()) {
 						echo '<p class="hidden-tablet"><span>'.__('Tagged with','cwp').'</span>';
 						the_tags('');
 						echo '</p>';		
@@ -62,7 +67,7 @@
 			
 				<div <?php post_class('list-post-content'); ?>>
 					<div class="post-img">
-					<?php if(isset($optionsdb['featured_image']) && $optionsdb['featured_image'] == 'Show') { ?>
+					<?php if(isset($featured_image) && $featured_image == 'show') { ?>
 						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 						<?php 
 							if ( has_post_thumbnail($post->ID) ) {
@@ -75,11 +80,11 @@
 						<p><?php the_excerpt(); ?></p>
 						<div class="post-info-phone">
 						<?php
-							if(isset($optionsdb['author']) && $optionsdb['author'] == 'Show') {
+							if(isset($the_author) && $the_author == 'show') {
 								$author = get_the_author();
 								echo '<p><span>'.__('Posted by','cwp').'</span><a href="'.get_author_posts_url( get_the_author_meta( 'ID' )).'">'.$author.'</a></p>';
 							}
-							if(isset($optionsdb['category']) && $optionsdb['category'] == 'Show') {
+							if(isset($the_category) && $the_category == 'show') {
 								
 								$category = get_the_category();
 								$cats = get_the_category($post->ID); 
@@ -90,7 +95,7 @@
 								    echo '<a href="'.get_category_link($category[0]->cat_ID).'">'.$tmp.'</a></p>';
                                 }    
 							}
-							if(isset($optionsdb['tags']) && $optionsdb['tags'] == 'Show' && has_tag()) {
+							if(isset($tags) && $tags == 'show' && has_tag()) {
 									echo '<p><span>'.__('Tagged with','cwp').'</span>';
 									the_tags('');
 									echo '</p>';
@@ -132,7 +137,4 @@
 </section><!-- .bloglist -->
 
 <?php
-    if(isset($optionsdb['latest_search']) && $optionsdb['latest_search'] == 'Show'):
-	   get_template_part('/inc/latest-work');
-	endif;
 get_footer(); ?>

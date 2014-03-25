@@ -1,27 +1,25 @@
-<?php global $optionsdb; ?>
+<?php 	$testimonial_title = cwp('testimonial_title');	$testimonial_content = cwp('testimonial_content');	$testimonial_author = cwp('testimonial_author');	$testimonial_info = cwp('testimonial_info');?>
         <section class="testimonials">
 			<div class="bg-texture"></div>
 			<div class="container">
-			
 				<div class="content">
 					<?php 
-						if(isset($optionsdb['testimonial_title']) && $optionsdb['testimonial_title'] != ''):
-							echo '<h2>'.htmlentities($optionsdb['testimonial_title']).'</h2>';
+						if(isset($testimonial_title) && $testimonial_title != ''):
+							echo '<h2>'.htmlentities($testimonial_title).'</h2>';
 						else:
 							echo '<h2>'.__('Testimonial title','cwp').'</h2>';
 						endif; 
 					?>	         
 					<div class="testimonial-box">
 						<?php 
-							if(isset($optionsdb['testimonial_content']) && $optionsdb['testimonial_content'] != ''):
-								echo '<p class="text">'.htmlentities($optionsdb['testimonial_content']).'</p>'; 
+							if(isset($testimonial_content) && $testimonial_content != ''):
+								echo '<p class="text">'.htmlentities($testimonial_content).'</p>'; 
 							else:
 								echo '<p class="text">'.__('Testimonial text','cwp').'</p>';
 							endif; 
 						?>	
-						<p class="client-info"><a><?php if(isset($optionsdb['testimonial_author']) && $optionsdb['testimonial_author'] != '') echo htmlentities($optionsdb['testimonial_author']).' '; ?><span><?php if(isset($optionsdb['testimonial_info']) && $optionsdb['testimonial_info'] != '') echo htmlentities($optionsdb['testimonial_info']).' '; ?></span></a></p>
+						<p class="client-info"><a><?php if(isset($testimonial_author) && $testimonial_author != '') echo htmlentities($testimonial_author).' '; ?><span><?php if(isset($testimonial_info) && $testimonial_info != '') echo htmlentities($testimonial_info).' '; ?></span></a></p>
 					</div><!-- .testimonial-box -->
-				</div><!-- .content -->
-				
+				</div><!-- .content -->
 			</div><!-- .container -->
 		</section><!-- .testimonials -->

@@ -30,28 +30,6 @@
 			self::$structure	= array(
 						array(
 							 "type"=>"tab",
-							 "name"=>"Color",
-							 "options"=>array(
-								array(
-									
-									"type"=>"color",
-									"name"=>"Select the first color for the site",
-									"description"=>"Select the first color for the site",
-									"id"=>"select_color1",
-									"default"=>"#dasd"
-								),
-								array(
-									
-									"type"=>"color",
-									"name"=>"Select the second color for the site",
-									"description"=>"Select the second color for the site",
-									"id"=>"select_color2",
-									"default"=>"#dasd"
-								)
-							 )
-						),
-						array(
-							 "type"=>"tab",
 							 "name"=>"General options",
 							 "options"=>array(
 								/* Logo */
@@ -152,7 +130,7 @@
 										array(
 											"type"=>"select",
 											"name"=>"Archive page",
-											"description"=>"Show or hide download brochure section in the archive page.",
+											"description"=>"Show or hide slider section in the archive page.",
 											"id"=>"slider_archive",
 											"options"=>array(
 												"hide"=>"Hide",
@@ -163,7 +141,7 @@
 										array(
 											"type"=>"select",
 											"name"=>"Search page",
-											"description"=>"Show or hide download brochure section in the search page.",
+											"description"=>"Show or hide slider section in the search page.",
 											"id"=>"slider_search",
 											"options"=>array(
 												"hide"=>"Hide",
@@ -235,7 +213,7 @@
 										array(
 											"type"=>"select",
 											"name"=>"Archive page",
-											"description"=>"Show or hide download brochure section in the archive page.",
+											"description"=>"Show or hide featured work section in the archive page.",
 											"id"=>"featured_archive",
 											"options"=>array(
 												"hide"=>"Hide",
@@ -246,7 +224,7 @@
 										array(
 											"type"=>"select",
 											"name"=>"Search page",
-											"description"=>"Show or hide download brochure section in the search page.",
+											"description"=>"Show or hide featured work section in the search page.",
 											"id"=>"featured_search",
 											"options"=>array(
 												"hide"=>"Hide",
@@ -273,7 +251,7 @@
 										array(
 											"type"=>"select",
 											"name"=>"Archive page",
-											"description"=>"Show or hide download brochure section in the archive page.",
+											"description"=>"Show or hide latest work section in the archive page.",
 											"id"=>"latest_archive",
 											"options"=>array(
 												"hide"=>"Hide",
@@ -284,7 +262,7 @@
 										array(
 											"type"=>"select",
 											"name"=>"Search page",
-											"description"=>"Show or hide download brochure section in the search page.",
+											"description"=>"Show or hide latest work section in the search page.",
 											"id"=>"latest_search",
 											"options"=>array(
 												"hide"=>"Hide",
@@ -311,7 +289,7 @@
 										array(
 											"type"=>"select",
 											"name"=>"Archive page",
-											"description"=>"Show or hide download brochure section in the archive page.",
+											"description"=>"Show or hide our services section in the archive page.",
 											"id"=>"services_archive",
 											"options"=>array(
 												"hide"=>"Hide",
@@ -322,7 +300,7 @@
 										array(
 											"type"=>"select",
 											"name"=>"Search page",
-											"description"=>"Show or hide download brochure section in the search page.",
+											"description"=>"Show or hide our services section in the search page.",
 											"id"=>"services_search",
 											"options"=>array(
 												"hide"=>"Hide",
@@ -437,7 +415,7 @@
 										array(
 											"type"=>"select",
 											"name"=>"Archive page",
-											"description"=>"Show or hide download brochure section in the archive page.",
+											"description"=>"Show or hide our team section in the archive page.",
 											"id"=>"team_archive",
 											"options"=>array(
 												"hide"=>"Hide",
@@ -448,7 +426,7 @@
 										array(
 											"type"=>"select",
 											"name"=>"Search page",
-											"description"=>"Show or hide download brochure section in the search page.",
+											"description"=>"Show or hide our team section in the search page.",
 											"id"=>"team_search",
 											"options"=>array(
 												"hide"=>"Hide",
@@ -545,6 +523,73 @@
 											"default"=>""
 										)
 										
+										
+									)
+								),
+								/* testimonials */
+								array(
+									"type"=>"group",
+									"name"=>"Testimonials section options",
+									"options"=>	array(
+										array(
+									
+											"type"=>"multiselect",
+											"name"=>"Select all the pages where you want this section to appear",
+											"description"=>"Hold down the control (ctrl) button to select multiple options",
+											"id"=>"testimonial_select",
+											"options"=> $all_pages,
+											"default"=> $default_pages
+										),
+										array(
+											"type"=>"select",
+											"name"=>"Archive page",
+											"description"=>"Show or hide testimonials section in the archive page.",
+											"id"=>"testimonial_archive",
+											"options"=>array(
+												"hide"=>"Hide",
+												"show"=>"Show"
+											),
+											"default"=>"hide"
+										),
+										array(
+											"type"=>"select",
+											"name"=>"Search page",
+											"description"=>"Show or hide testimonials section in the search page.",
+											"id"=>"testimonial_search",
+											"options"=>array(
+												"hide"=>"Hide",
+												"show"=>"Show"
+											),
+											"default"=>"hide"
+										),
+										array(
+											"type"=>"input_text",
+											"name"=>"Title",
+											"description"=>"Enter the title to appear in the testimonials area",
+											"id"=>"testimonial_title",
+											"default"=>""
+										),
+										array(
+											"type"=>"input_text",
+											"name"=>"Content",
+											"description"=>"Enter the text to appear in the testimonials area",
+											"id"=>"testimonial_content",
+											"default"=>""
+										),
+										array(
+											"type"=>"input_text",
+											"name"=>"Author",
+											"description"=>"Enter the author to appear in the testimonials area",
+											"id"=>"testimonial_author",
+											"default"=>""
+										),
+										array(
+											"type"=>"input_text",
+											"name"=>"Info about the author",
+											"description"=>"Enter a small piece of information to appear after the author name in the testimonials area",
+											"id"=>"testimonial_info",
+											"default"=>""
+										)
 									)
 								),
 								/* our skills */
@@ -552,7 +597,15 @@
 									"type"=>"group",
 									"name"=>"Our skills section options",
 									"options"=>	array(
-										
+										array(
+									
+											"type"=>"multiselect",
+											"name"=>"Select all the pages where you want this section to appear",
+											"description"=>"Hold down the control (ctrl) button to select multiple options",
+											"id"=>"the_skill_select",
+											"options"=> $all_pages,
+											"default"=> $default_pages
+										),
 										array(
 											"type"=>"select",
 											"name"=>"Archive page",
@@ -649,203 +702,371 @@
 											"min"=>1, 
 											"step"=>1,
 											"default"=>"1"
-										)
-									)	
-									
-								),
-								/* testimonials */
-								array(
-									"type"=>"group",
-									"name"=>"Testimonials section options",
-									"options"=>	array(
-										array(
-									
-											"type"=>"multiselect",
-											"name"=>"Select all the pages where you want this section to appear",
-											"description"=>"Hold down the control (ctrl) button to select multiple options",
-											"id"=>"testimonial_select",
-											"options"=> $all_pages,
-											"default"=> $default_pages
 										),
 									)
-								)		
+								)								
 							)
 						),	
 						array(
 							 "type"=>"tab",
-							 "name"=>"Un exemplu de tab",
+							 "name"=>"Blog + Search + Archive options",
 							 "options"=>array(
-								array(
-									"type"=>"input_text",
-									"name"=>"Un exemplu de input text",
-									"description"=>"Descriere input text",
-									"id"=>"input_textid",
-									"default"=>"default"
-								),
-								array(
-									
-									"type"=>"input_number",
-									"name"=>"Un exemplu de input numar",
-									"description"=>"Descriere input numar",
-									"id"=>"input_numberid",
-									"max"=>20,
-									"min"=>1, 
-									"step"=>1,
-									"default"=>"0"
-								),
-								array(
-									
-									"type"=>"select",
-									"name"=>"Un exemplu de select",
-									"description"=>"Descriere select",
-									"id"=>"selectid",
-									"options"=>array(
-										"valoare1"=>"nume1",
-										"valoare2"=>"nume2",
-										"valoare3"=>"nume3",
-										"valoare4"=>"nume4",
-									),
-									"default"=>"valoare1"
-								),
-								array(
-									
-									"type"=>"multiselect",
-									"name"=>"Un exemplu de multiselect",
-									"description"=>"Descriere multiselect",
-									"id"=>"multiselectid",
-									"options"=>array(
-										"valoare1"=>"nume1",
-										"valoare2"=>"nume2",
-										"valoare3"=>"nume3",
-										"valoare4"=>"nume4",
-									),
-									"default"=>array("valoare1")
-								),
-								array(
-									
-									"type"=>"radio",
-									"name"=>"Un exemplu de radio",
-									"description"=>"Descriere radio",
-									"id"=>"radioid",
-									"options"=>array(
-										"valoare1"=>"nume1",
-										"valoare2"=>"nume2",
-										"valoare3"=>"nume3",
-										"valoare4"=>"nume4",
-									),
-									"default"=>"valoare1"
-								),
-								array(
-									
-									"type"=>"checkbox",
-									"name"=>"Un exemplu de checkbox",
-									"description"=>"Descriere checkbox",
-									"id"=>"checkboxid",
-									"options"=>array(
-										"valoare1"=>"nume1",
-										"valoare2"=>"nume2",
-										"valoare3"=>"nume3",
-										"valoare4"=>"nume4",
-									),
-									"default"=>array("valoare1")
-								),
-								array(
-									"type"=>"title",
-									"name"=>"Exemplu de titlu"
-								)
-								,
-								array(
-									
-									"type"=>"image",
-									"name"=>"Un exemplu de imagine",
-									"description"=>"Descriere imagine",
-									"id"=>"imageid",
-									"default"=>"/img/" 
-								),
-								array(
-									
-									"type"=>"color",
-									"name"=>"Un exemplu de color",
-									"description"=>"Descriere color",
-									"id"=>"colorid",
-									"default"=>"#dasd"
-								),
-								array(
-									
-									"type"=>"textarea",
-									"name"=>"Un exemplu de textarea",
-									"description"=>"Descriere textarea",
-									"id"=>"textareaid",
-									"default"=>"ssda"
-								),
-								array(
-									
-									"type"=>"textarea_html",
-									"name"=>"Un exemplu de textarea ce poate contine taguri HTML",
-									"description"=>"Descriere textarea ce poate contine taguri HTML",
-									"id"=>"textareaidhtml",
-									"default"=>"ssda"
-								),
-								array(
-									
-									"type"=>"editor",
-									"name"=>"Un exemplu de editor",
-									"description"=>"Descriere editor",
-									"id"=>"editorid",
-									"default"=>"sda" 
-								),
-								array(
-									
-									"type"=>"group",
-									"name"=>"Un exemplu grup",
-									"options"=>	array(
 										array(
-											"type"=>"typography",
-											"name"=>"Un exemplu de tipgrafie",
-											"description"=>"Descriere tipgrafie",
-											"id"=>"typoid",
-											"default"=>array(
-												"font" => "arial",
-												"style" => "normal",
-												"size" => "12",
-												"color" => "#sadads", 
-											)
+											
+											"type"=>"radio",
+											"name"=>"Layout for blog page",
+											"description"=>"Choose the layout for the blog page, the archive page and the search page",
+											"id"=>"layout_blog",
+											"options"=>array(
+												"valoare1"=>"Left sidebar",
+												"valoare2"=>"Right sidebar",
+												"valoare3"=>"Both left and right sidebars"
+											),
+											"default"=>"valoare1"
 										),
 										array(
-											"type"=>"background",
-											"name"=>"Un exemplu de background",
-											"description"=>"Descriere background",
-											"id"=>"bgid",
-											"default"=>array(
-												"bgcolor"=>"background",
-												"bgimage"=>"/sda/",
-												"bgrepeat"=>"repedaat",
-												"bgposition"=>"asda",
-												"bgattachment"=>"scrasdall"
-											)
+											"type"=>"select",
+											"name"=>"Featured image",
+											"description"=>"Show or hide featured image in the blog page, the archive page and the search page",
+											"id"=>"featured_image",
+											"options"=>array(
+												"hide"=>"Hide",
+												"show"=>"Show"
+											),
+											"default"=>"show"
+										),
+										array(
+											"type"=>"select",
+											"name"=>"Date",
+											"description"=>"Show or hide date in the blog page, the archive page and the search page",
+											"id"=>"date",
+											"options"=>array(
+												"hide"=>"Hide",
+												"show"=>"Show"
+											),
+											"default"=>"show"
+										),
+										array(
+											"type"=>"select",
+											"name"=>"Category",
+											"description"=>"Show or hide category in the blog page, the archive page and the search page",
+											"id"=>"category",
+											"options"=>array(
+												"hide"=>"Hide",
+												"show"=>"Show"
+											),
+											"default"=>"show"
+										),
+										array(
+											"type"=>"select",
+											"name"=>"Author",
+											"description"=>"Show or hide author in the blog page, the archive page and the search page",
+											"id"=>"author",
+											"options"=>array(
+												"hide"=>"Hide",
+												"show"=>"Show"
+											),
+											"default"=>"show"
+										),
+										array(
+											"type"=>"select",
+											"name"=>"Tags",
+											"description"=>"Show or hide tags in the blog page, the archive page and the search page",
+											"id"=>"tags",
+											"options"=>array(
+												"hide"=>"Hide",
+												"show"=>"Show"
+											),
+											"default"=>"show"
 										)
-									
-									)								
-								)
-							 )
+							)
+						),	
+						array(
+							 "type"=>"tab",
+							 "name"=>"Single post options",
+							 "options"=>array(
+										array(
+											
+											"type"=>"radio",
+											"name"=>"Layout for single post",
+											"description"=>"Choose the layout for the single post",
+											"id"=>"layout_single",
+											"options"=>array(
+												"valoare1"=>"Left sidebar",
+												"valoare2"=>"Right sidebar",
+												"valoare3"=>"Both left and right sidebars"
+											),
+											"default"=>"valoare1"
+										),
+										array(
+											"type"=>"select",
+											"name"=>"Featured image",
+											"description"=>"Show or hide featured image in the single post",
+											"id"=>"featured_image_single",
+											"options"=>array(
+												"hide"=>"Hide",
+												"show"=>"Show"
+											),
+											"default"=>"show"
+										),
+										array(
+											"type"=>"select",
+											"name"=>"Date",
+											"description"=>"Show or hide date in the single post",
+											"id"=>"date_single",
+											"options"=>array(
+												"hide"=>"Hide",
+												"show"=>"Show"
+											),
+											"default"=>"show"
+										),
+										array(
+											"type"=>"select",
+											"name"=>"Category",
+											"description"=>"Show or hide category in the single post",
+											"id"=>"category_single",
+											"options"=>array(
+												"hide"=>"Hide",
+												"show"=>"Show"
+											),
+											"default"=>"show"
+										),
+										array(
+											"type"=>"select",
+											"name"=>"Author",
+											"description"=>"Show or hide author in the single post",
+											"id"=>"author_single",
+											"options"=>array(
+												"hide"=>"Hide",
+												"show"=>"Show"
+											),
+											"default"=>"show"
+										),
+										array(
+											"type"=>"select",
+											"name"=>"Tags",
+											"description"=>"Show or hide tags in the single post",
+											"id"=>"tags_single",
+											"options"=>array(
+												"hide"=>"Hide",
+												"show"=>"Show"
+											),
+											"default"=>"show"
+										),
+										array(
+											"type"=>"select",
+											"name"=>"Comments",
+											"description"=>"Show or hide comments in the single post",
+											"id"=>"comments",
+											"options"=>array(
+												"hide"=>"Hide",
+												"show"=>"Show"
+											),
+											"default"=>"show"
+										)
+							)
 						),
 						array(
-							"type"=>"tab",
-							"name"=>"Alt tab",
-							"options"=>array(
+							 "type"=>"tab",
+							 "name"=>"Footer options",
+							 "options"=>array(		
 										array(
-											"type"=>"background",
-											"name"=>"Un exemplu de background",
-											"description"=>"Descriere background",
-											"id"=>"bgid2",
-											"default"=>array(
-												"bgcolor"=>"background",
-												"bgimage"=>"/sda/",
-												"bgrepeat"=>"repeat",
-												"bgposition"=>"center center",
-												"bgattachment"=>"scroll"
-											)
-										))
+											"type"=>"select",
+											"name"=>"Footer columns",
+											"description"=>"How many columns should be displayed in your footer",
+											"id"=>"footer_columns",
+											"options"=>array(
+												"doi"=>"Two",
+												"trei"=>"Three"
+											),
+											"default"=>"doi"
+										),
+										array(
+									
+											"type"=>"image",
+											"name"=>"Logo",
+											"description"=>"",
+											"id"=>"logo_footer",
+											"default"=>"" 
+										),
+										array(
+											"type"=>"input_text",
+											"name"=>"Logo footer text",
+											"description"=>"",
+											"id"=>"logo_footer_text",
+											"default"=>""
+										),
+										array(
+											"type"=>"input_text",
+											"name"=>"Twitter Link",
+											"description"=>"Enter your twitter account link. If you leave this blank the twitter link in the footer wont be displayed",
+											"id"=>"twitter",
+											"default"=>""
+										),
+										array(
+											"type"=>"input_text",
+											"name"=>"RSS link",
+											"description"=>"Enter your RSS link. If you leave this blank the RSS link in the footer wont be displayed",
+											"id"=>"rss",
+											"default"=>""
+										),
+										array(
+											"type"=>"input_text",
+											"name"=>"Linkedin Link",
+											"description"=>"Enter your Linkedin link. If you leave this blank the linkedin link in the footer wont be displayed",
+											"id"=>"linkedin",
+											"default"=>""
+										),
+										array(
+											"type"=>"input_text",
+											"name"=>"Copyright",
+											"description"=>"Enter your copyright. If you leave this blank the copyright in the footer wont be displayed",
+											"id"=>"copyright",
+											"default"=>""
+										),
+							)
+						),
+						array(
+							 "type"=>"tab",
+							 "name"=>"Contact options",
+							 "options"=>array(	
+								array(
+									"type"=>"input_text",
+									"name"=>"Address for google map",
+									"description"=>"Enter your address for the google map to appear contact page.If you leave this blank the google map wont be displayed",
+									"id"=>"address_map",
+									"default"=>""
+								),
+								array(
+									"type"=>"input_text",
+									"name"=>"Email address",
+									"description"=>"Enter your email address to appear in footer and contact page.If you leave this blank the email address and the contact form wont be displayed",
+									"id"=>"email",
+									"default"=>"test@yahoo.com"
+								),
+								array(
+									"type"=>"input_text",
+									"name"=>"Phone number",
+									"description"=>"Enter your phone number to appear in footer and contact page.If you leave this blank the phone number wont be displayed",
+									"id"=>"phone",
+									"default"=>""
+								),
+								array(
+									"type"=>"input_text",
+									"name"=>"Address",
+									"description"=>"Enter your address to appear in footer and contact page.If you leave this blank the address wont be displayed",
+									"id"=>"address",
+									"default"=>""
+								),
+								array(
+									"type"=>"input_text",
+									"name"=>"Subtitle",
+									"description"=>"Enter a subtitle to appear in contact page.If you leave this blank,WE ARE HERE FOR YOU will be displayed",
+									"id"=>"contact_title",
+									"default"=>""
+								),
+								array(
+									"type"=>"input_text",
+									"name"=>"Contact form title",
+									"description"=>"Enter a title for the form to appear in contact page.",
+									"id"=>"contact_form",
+									"default"=>""
+								)
+							)
+						),
+						array(
+							 "type"=>"tab",
+							 "name"=>"Portofolio options",
+							 "options"=>array(
+										array(
+											"type"=>"select",
+											"name"=>"Portofolio categories",
+											"description"=>"Show or hide categories in the portofolio",
+											"id"=>"portofolio_categories",
+											"options"=>array(
+												"hide"=>"Hide",
+												"show"=>"Show"
+											),
+											"default"=>"show"
+										),
+										array(
+											"type"=>"select",
+											"name"=>"Featured image in portofolio single page",
+											"description"=>"Show or hide featured image in the portofolio single page",
+											"id"=>"featured_image_portofolio",
+											"options"=>array(
+												"hide"=>"Hide",
+												"show"=>"Show"
+											),
+											"default"=>"show"
+										),
+										array(
+											"type"=>"select",
+											"name"=>"Related items in portofolio single page",
+											"description"=>"Show or hide related items in the portofolio single page",
+											"id"=>"related_items_portofolio",
+											"options"=>array(
+												"hide"=>"Hide",
+												"show"=>"Show"
+											),
+											"default"=>"show"
+										),
+										array(
+											"type"=>"select",
+											"name"=>"Category name in portofolio single page",
+											"description"=>"Show or hide category name in the portofolio single page",
+											"id"=>"category_portofolio",
+											"options"=>array(
+												"hide"=>"Hide",
+												"show"=>"Show"
+											),
+											"default"=>"show"
+										),
+										array(
+											"type"=>"select",
+											"name"=>"Client name in portofolio single page",
+											"description"=>"Show or hide client name in the portofolio single page",
+											"id"=>"client_portofolio",
+											"options"=>array(
+												"hide"=>"Hide",
+												"show"=>"Show"
+											),
+											"default"=>"show"
+										),
+										array(
+											"type"=>"select",
+											"name"=>"Purpose in portofolio single page",
+											"description"=>"Show or hide purpose in the portofolio single page",
+											"id"=>"purpose_portofolio",
+											"options"=>array(
+												"hide"=>"Hide",
+												"show"=>"Show"
+											),
+											"default"=>"show"
+										),
+										array(
+											"type"=>"select",
+											"name"=>"Author name in portofolio single page",
+											"description"=>"Show or hide author name in the portofolio single page",
+											"id"=>"author_portofolio",
+											"options"=>array(
+												"hide"=>"Hide",
+												"show"=>"Show"
+											),
+											"default"=>"show"
+										),
+										array(
+											"type"=>"select",
+											"name"=>"Tags in portofolio single page",
+											"description"=>"Show or hide tags in the portofolio single page",
+											"id"=>"tags_portofolio",
+											"options"=>array(
+												"hide"=>"Hide",
+												"show"=>"Show"
+											),
+											"default"=>"show"
+										)
+							 )
 						)
 			
 					); 

@@ -4,7 +4,7 @@ Template Name: Portofolio
 */
 ?>
 <?php get_header(); ?>
-<?php global  $optionsdb; ?>
+
 <section class="title-page-area">
 	<div class="container">
 
@@ -12,13 +12,15 @@ Template Name: Portofolio
 
     </div><!-- .container -->
 </section><!-- .title-page-area -->
-
+<?php
+	$portofolio_categories = cwp('portofolio_categories');
+?>
 <?php 
 	/*
 	* Display categories
 	*/
 	
-	if((isset($optionsdb['portofolio_categories']) && $optionsdb['portofolio_categories'] == 'Show') || !isset($optionsdb['portofolio_categories'])):
+	if(isset($portofolio_categories) && $portofolio_categories == 'show'):
 ?>
 			<span id="ascuns"><?php _e('Show','cwp'); ?></span>
 			<section class="work">

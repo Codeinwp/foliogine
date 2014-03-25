@@ -6,6 +6,14 @@
  */
 ?>
 <?php get_header(); ?>
+<?php 
+	$date_single = cwp('date_single');
+	$author_single = cwp('author_single');
+	$category_single = cwp('category_single');
+	$tags_single = cwp('tags_single');
+	$featured_image_single = cwp('featured_image_single');
+	$comments = cwp('comments');
+?>
 <section class="title-page-area">
 	<div class="container">
 		<h1><?php the_title(); ?></h1>
@@ -23,16 +31,16 @@
 			<div class="list-post-box post-box">
 				<div class="list-post-info">
 					<?php
-						if(isset($optionsdb['date_single']) && $optionsdb['date_single'] == 'Show') {
+						if(isset($date_single) && $date_single == 'show') {
 							$d = get_the_date('F j Y','','',false);
 							$dt = get_the_date('Y-m-d','','',false);
 							echo '<time datetime="'.$dt.'"><span>'.$d.'</span></time>';
 						}
-						if(isset($optionsdb['author_single']) && $optionsdb['author_single'] == 'Show') {
+						if(isset($author_single) && $author_single == 'show') {
 							$author = get_the_author();
 							echo '<p class="hidden-tablet"><span>'.__('Posted by','cwp').'</span><a href="'.get_author_posts_url( get_the_author_meta( 'ID' )).'">'.$author.'</a></p>';
 						}
-						if(isset($optionsdb['category_single']) && $optionsdb['category_single'] == 'Show') {
+						if(isset($category_single) && $category_single == 'show') {
 							
 							$category = get_the_category();
 							$cats = get_the_category($post->ID); 
@@ -43,7 +51,7 @@
 				                echo '<a href="'.get_category_link($category[0]->cat_ID).'">'.$tmp.'</a></p>';
                             }    
 						}
-						if(isset($optionsdb['tags_single']) && $optionsdb['tags_single'] == 'Show' && has_tag()) {
+						if(isset($tags_single) && $tags_single == 'show' && has_tag()) {
 							echo '<p class="hidden-tablet"><span>'.__('Tagged with','cwp').'</span>';
 						    the_tags('');
 							echo '</p>';		
@@ -54,7 +62,7 @@
 					<div class="post-img">
 						<div>
 						<?php 
-							if(isset($optionsdb['featured_image_single']) && $optionsdb['featured_image_single'] == 'Show') { 
+							if(isset($featured_image_single) && $featured_image_single == 'show') { 
 								if ( has_post_thumbnail($post->ID) ) {
 									echo get_the_post_thumbnail($post->ID, 'blog-small'); 
 								}	
@@ -67,11 +75,11 @@
 				</div>
 				<div class="post-info-phone">
 					<?php
-					if(isset($optionsdb['author_single']) && $optionsdb['author_single'] == 'Show') {
+					if(isset($author_single) && $author_single == 'show') {
 						$author = get_the_author();
 						echo '<p><span>'.__('Posted by ','cwp').'</span><a href="'.get_author_posts_url( get_the_author_meta( 'ID' )).'">'.$author.'</a></p>';
 					}
-					if(isset($optionsdb['category_single']) && $optionsdb['category_single'] == 'Show') {
+					if(isset($category_single) && $category_single == 'show') {
 						$category = get_the_category();
 						$cats = get_the_category($post->ID); 
 						if(!empty($cats)) 
@@ -81,7 +89,7 @@
 				            echo '<a href="'.get_category_link($category[0]->cat_ID).'">'.$tmp.'</a></p>';
                         }    
 					}
-					if(isset($optionsdb['tags_single']) && $optionsdb['tags_single'] == 'Show' && has_tag()) {
+					if(isset($tags_single) && $tags_single == 'show' && has_tag()) {
 						echo '<p><span>'.__('Tagged with ','cwp').'</span>';
 						the_tags('');
 						echo '</p>';		
@@ -106,7 +114,7 @@
 
 <div class="comments">
 	<?php 
-		if(isset($optionsdb['comments']) && $optionsdb['comments'] == 'Show') {
+		if(isset($comments) && $comments == 'show') {
 			comments_template(); 
 		}
 	?>

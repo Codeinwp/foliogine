@@ -10,7 +10,6 @@
  * @package foliogine
  */
 get_header();
-global  $optionsdb;
 while ( have_posts() ) : the_post();
 ?>
 <section class="title-page-area">
@@ -23,11 +22,7 @@ while ( have_posts() ) : the_post();
 	<div class="container">
 		<?php the_content(); ?>
         <div class="comments">
-			<?php 
-				if(isset($optionsdb['comments']) && $optionsdb['comments'] == 'Show') {
-					comments_template(); 
-				}
-			?>
+			<?php comments_template(); ?>
 		</div>
 	</div> <!-- .container -->
 </section><!-- .about -->

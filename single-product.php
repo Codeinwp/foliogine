@@ -1,6 +1,12 @@
 <?php 
 	get_header();
-	global  $optionsdb; 
+	
+	$category_portofolio = cwp('category_portofolio');
+	$client_portofolio = cwp('client_portofolio');
+	$author_portofolio = cwp('author_portofolio');
+	$tags_portofolio = cwp('tags_portofolio');
+	$related_items_portofolio = cwp('related_items_portofolio');
+	
 	while ( have_posts() ) : the_post(); 
 		cwp_setPostViews(get_the_ID());
 ?>
@@ -47,7 +53,7 @@
 						<?php _e('Item details','cwp'); ?>
 					</p>
 					<?php 						
-						if(isset($optionsdb['category_portofolio']) || $optionsdb['category_portofolio'] == 'Show'):				
+						if(isset($category_portofolio) || $category_portofolio == 'show'):				
 								$items = get_the_terms($post->ID, 'categories');								
 								if(!empty($items)) {									
 									foreach ( $items as $item ) {										
@@ -61,7 +67,7 @@
                                     echo '</p>';
                                 }    
 				        endif; 											
-						if(isset($optionsdb['client_portofolio']) || $optionsdb['client_portofolio'] == 'Show'):
+						if(isset($client_portofolio) || $client_portofolio == 'show'):
 								$client = get_post_meta($idd, 'client_option');
 							
 								if(isset($client[0]) && $client[0] != ''):
@@ -70,12 +76,12 @@
                                     echo '</p>';
 								endif;	
 				        endif; 											 															
-						if(isset($optionsdb['author_portofolio']) || $optionsdb['author_portofolio'] == 'Show'): ?>	
+						if(isset($author_portofolio) || $author_portofolio == 'show'): ?>	
 							<p><span><?php _e('By:','cwp'); ?></span> 	  	
 								<?php the_author(); ?>
 							</p>					
 					<?php endif;					
-						if(isset($optionsdb['tags_portofolio']) && $optionsdb['tags_portofolio'] == 'Show' && has_tag()):
+						if(isset($tags_portofolio) && $tags_portofolio == 'show' && has_tag()):
                                     $taguri = get_the_tags(); 
                                     if(isset($taguri) && !empty($taguri)) {
                                         echo '<p><span>'.__('Tags:','cwp').'</span>';    
@@ -99,7 +105,7 @@
 	* Related items
 	*/
 	
-	if(isset($optionsdb['related_items_portofolio']) && $optionsdb['related_items_portofolio'] == 'Show') :
+	if(isset($related_items_portofolio) && $related_items_portofolio == 'show') :
 ?>
 <section class="work related-items">
 	<div class="container">		

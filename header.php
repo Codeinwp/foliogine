@@ -17,9 +17,6 @@
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 <![endif]-->
-
-
-<?php global  $optionsdb; ?>
  
 <script type="text/javascript">
   var ajaxurl = '<?php echo admin_url('admin-ajax.php'); ?>';
@@ -29,8 +26,10 @@
 </head>
    
 <?php 
-    if(isset($optionsdb['address_map']) && $optionsdb['address_map'] != '') :?>				
-        <body onLoad="initialize();showAddress('<?php echo $optionsdb['address_map']; ?>');" <?php body_class(); ?>>
+	$address_map = cwp('address_map');
+
+    if(isset($address_map) && $address_map != '') : ?>				
+        <body onLoad="initialize();showAddress('<?php echo $address_map; ?>');" <?php body_class(); ?>>
 <?php		
     else:
 ?>

@@ -8,8 +8,13 @@
  */
 ?>
 <?php get_header(); ?>
-
-<?php global  $optionsdb; ?>
+<?php 
+	$date = cwp('date');
+	$the_author = cwp('author');
+	$the_category = cwp('category');
+	$tags = cwp('tags');
+	$featured_image = cwp('featured_image');
+?>
 
 <section class="title-page-area">
 	<div class="container">
@@ -73,16 +78,16 @@
 			<div class="list-post-box">
 				<div class="list-post-info">
 				<?php
-					if(isset($optionsdb['date']) && $optionsdb['date'] == 'Show') {
+					if(isset($date) && $date == 'show') {
 						$d = get_the_date('F j Y','','',false);
 						$dt = get_the_date('Y-m-d','','',false);
 						echo '<time datetime="'.$dt.'"><span>'.$d.'</span></time>';
 					}	
-					if(isset($optionsdb['author']) && $optionsdb['author'] == 'Show') {
+					if(isset($the_author) && $the_author == 'show') {
 						$author = get_the_author();
 						echo '<p class="hidden-tablet"><span>'.__('Posted by','cwp').'</span><a href="'.get_author_posts_url( get_the_author_meta( 'ID' )).'">'.$author.'</a></p>';
 					}
-					if(isset($optionsdb['category']) && $optionsdb['category'] == 'Show') {
+					if(isset($the_category) && $the_category == 'show') {
 						echo '<p class="hidden-tablet"><span>'.__('Posted in','cwp').'</span>';
 						$category = get_the_category();
 						$cats = get_the_category($post->ID); 
@@ -90,7 +95,7 @@
 							$tmp = $cats[0]->cat_name;
 						echo '<a href="'.get_category_link($category[0]->cat_ID).'">'.$tmp.'</a></p>';
 					}
-					if(isset($optionsdb['tags']) && $optionsdb['tags'] == 'Show' && has_tag()) {
+					if(isset($tags) && $tags == 'show' && has_tag()) {
 						echo '<p class="hidden-tablet"><span>'.__('Tagged with','cwp').'</span>';
 						the_tags('');
 						echo '</p>';		
@@ -100,7 +105,7 @@
 			
 				<div <?php post_class('list-post-content'); ?>>
 					<div class="post-img">
-					<?php if(isset($optionsdb['featured_image']) && $optionsdb['featured_image'] == 'Show') { ?>
+					<?php if(isset($featured_image) && $featured_image == 'show') { ?>
 						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 						<?php 
 							if ( has_post_thumbnail($post->ID) ) {
@@ -113,11 +118,11 @@
 						<p><?php the_excerpt(); ?></p>
 						<div class="post-info-phone">
 						<?php
-							if(isset($optionsdb['author']) && $optionsdb['author'] == 'Show') {
+							if(isset($the_author) && $the_author == 'show') {
 								$author = get_the_author();
 								echo '<p><span>'.__('Posted by','cwp').'</span><a href="'.get_author_posts_url( get_the_author_meta( 'ID' )).'">'.$author.'</a></p>';
 							}
-							if(isset($optionsdb['category']) && $optionsdb['category'] == 'Show') {
+							if(isset($the_category) && $the_category == 'show') {
 								$author = get_the_author();
 								echo '<p><span>'.__('Posted in','cwp').'</span>';
 								$category = get_the_category();
@@ -126,7 +131,7 @@
 									$tmp = $cats[0]->cat_name;
 								echo '<a href="'.get_category_link($category[0]->cat_ID).'">'.$tmp.'</a></p>';
 							}
-							if(isset($optionsdb['tags']) && $optionsdb['tags'] == 'Show' && has_tag()) {
+							if(isset($tags) && $tags == 'show' && has_tag()) {
 									echo '<p><span>'.__('Tagged width','cwp').'</span>';
 									the_tags('');
 									echo '</p>';
@@ -173,16 +178,18 @@
     /*
 	* Slider section
 	*/
+	$slider_archive = cwp('slider_archive');
 	
-	if(isset($optionsdb['slider_archive']) && $optionsdb['slider_archive'] == 'Show'):
+	if(isset($slider_archive) && $slider_archive == 'show'):
         get_template_part('/inc/slider');
 	endif;
 
 	/*
 	* Featured work section
 	*/
+	$featured_archive = cwp('featured_archive');
 	
-	if(isset($optionsdb['featured_archive']) && $optionsdb['featured_archive'] == 'Show'):
+	if(isset($featured_archive) && $featured_archive == 'show'):
         $count_posts = wp_count_posts('product');
 		$nr_portofolio = $count_posts->publish; 
 		
@@ -194,49 +201,54 @@
 	/*
 	* Our services
 	*/
+	$services_archive = cwp('services_archive');
 	
-	if(isset($optionsdb['services_archive']) && $optionsdb['services_archive'] == 'Show'):
+	if(isset($services_archive) && $services_archive == 'show'):
         get_template_part('/inc/our-services');
 	endif;
 	
     /*
 	* Our team section
 	*/
+	$team_archive = cwp('team_archive');
 	
-	if(isset($optionsdb['team_archive']) && $optionsdb['team_archive'] == 'Show'):
+	if(isset($team_archive) && $team_archive == 'show'):
         get_template_part('/inc/our-team');
 	endif;
 	
 	/*
 	* Testimonial
 	*/
+	$testimonial_archive = cwp('testimonial_archive');
 	
-	if(isset($optionsdb['testimonial_archive']) && $optionsdb['testimonial_archive'] == 'Show'):
+	if(isset($testimonial_archive) && $testimonial_archive == 'show'):
         get_template_part('/inc/testimonial-options');
 	endif;
 
     /*
     * Download brochure section
     */
-
+	$download_archive = cwp('download_archive');
     
-	if(isset($optionsdb['download_archive']) && $optionsdb['download_archive'] == 'Show'):
+	if(isset($download_archive) && $download_archive == 'show'):
         get_template_part('/inc/brochure');
     endif;
 
 	/*
     * Latest work section
     */
-
-	if(isset($optionsdb['latest_archive']) && $optionsdb['latest_archive'] == 'Show'):
+	$latest_archive = cwp('latest_archive');
+	
+	if(isset($latest_archive) && $latest_archive == 'show'):
 		get_template_part('/inc/latest-work');
 	endif;
 
 	/*
 	* OUR SKILLS section
 	*/
+	$skill_archive = cwp('skill_archive');
 	
-	if(isset($optionsdb['skill_archive']) && $optionsdb['skill_archive'] == 'Show'):
+	if(isset($skill_archive) && $skill_archive == 'show'):
         get_template_part('/inc/our-skills');
     endif;
 			

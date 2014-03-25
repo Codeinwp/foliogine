@@ -5,7 +5,14 @@
 ?>
 <?php get_header(); ?>
 
-<?php global  $optionsdb; ?>
+<?php 
+	$email = cwp('email');
+	$contact_title = cwp('contact_title');
+	$phone = cwp('phone');
+	$address = cwp('address');
+	$contact_form = cwp('contact_form');
+?>
+
 <?php	if(isset($_POST['submitted'])) :        
 			if(trim($_POST['formname']) === ''):               
 				$nameError = __('Please enter your first name.','cwp');               
@@ -32,8 +39,10 @@
 					$message = trim($_POST['formmessage']);               
 				endif;        
 			endif; 		        
-			if(!isset($hasError)):               
-				$emailTo = $optionsdb['email'];                             
+			if(!isset($hasError)): 
+				if(isset($email) && $email != ''):
+					$emailTo = $email;
+				endif;
 				$subject = 'From '.$name;               
 				$body = "Name: $name \n\nEmail: $mail \n\nMessage: $message";               
 				$headers = 'From: '.$name.' <'.$emailTo.'>' . "\r\n" . 'Reply-To: ' . $mail; 				               
@@ -58,28 +67,29 @@
 							</div>				
 							<div class="right">					
 							<div>							
-							<?php 	if(isset($optionsdb['contact_title']) && $optionsdb['contact_title'] != ''): ?>									
-										<h2><?php echo $optionsdb['contact_title']; ?></h2>						
+							<?php 	if(isset($contact_title) && $contact_title != ''): ?>									
+										<h2><?php echo $contact_title; ?></h2>						
 							<?php 	else: ?>											
 										<h2><?php _e('We are here for you','cwp'); ?></h2>						
 							<?php 	endif; 								
-									if((isset($optionsdb['phone']) && $optionsdb['phone'] != '') || (isset($optionsdb['email']) && $optionsdb['email'] != '') || (isset($optionsdb['address']) && $optionsdb['address'] != '')): ?>									
+									if((isset($phone) && $phone != '') || (isset($email) && $email != '') || (isset($address) && $address != '')): ?>									
 										<address>									
 										<?php										
-											if(isset($optionsdb['address']) && $optionsdb['address'] != '') :											
-												echo '<p><span>Address:</span>'.$optionsdb['address'].'</p>';										
+											if(isset($address) && $address != '') :											
+												echo '<p><span>Address:</span>'.$address.'</p>';										
 											endif;										
-											if((isset($optionsdb['phone']) && $optionsdb['phone'] != '') || (isset($optionsdb['email']) && $optionsdb['email'] != '')):									
+											if((isset($phone) && $phone != '') || (isset($email) && $email != '')):									
 										?>											
 												<p>											
 													<?php												
-														if(isset($optionsdb['phone']) && $optionsdb['phone'] != ''):													
-															echo '<span>'.__('Phone:','cwp').'</span>'.$optionsdb['phone'];												
+														if(isset($phone) && $phone != ''):													
+															echo '<span>'.__('Phone:','cwp').'</span>'.$phone;												
 														endif;													
-														if(isset($optionsdb['email']) && $optionsdb['email'] != ''):													
+														if(isset($email) && $email != ''):													
 															echo '<span>'.__('Email:','cwp').' </span>';													
-															echo '<a href="mailto:'.$optionsdb['email'].'">'.$optionsdb['email'].'</a>';												
-														endif;												?>											
+															echo '<a href="mailto:'.$email.'">'.$email.'</a>';												
+														endif;												
+													?>											
 												</p>									
 											<?php endif; ?>										
 										</address>								
@@ -89,11 +99,11 @@
 									</p>						
 									<div class="clear"></div>					
 							</div> 			
-							<?php if(isset($optionsdb['email']) && $optionsdb['email'] != ''): ?>						
+							<?php if(isset($email) && $email != ''): ?>						
 									<div class="form-contact">							
 									<?php 								
-										if(isset($optionsdb['contact_form']) && $optionsdb['contact_form'] != ''):									
-											echo '<h2>'.$optionsdb['contact_form'].'</h2>';								
+										if(isset($contact_form) && $contact_form != ''):									
+											echo '<h2>'.$contact_form.'</h2>';								
 										endif;							
 									?>							
 									<?php if(isset($emailSent) && $emailSent == true) : ?>									
