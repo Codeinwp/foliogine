@@ -209,8 +209,8 @@ function cwp_create_post_type() {
   register_post_type( 'product',
 		array(
 			'labels' => array(
-				'name' => __( 'Products','cwp' ),
-				'singular_name' => __( 'Product','cwp' )
+				'name' => __( 'Portofolio','cwp' ),
+				'singular_name' => __( 'Portofolio','cwp' )
 			),
 		'public' => true,
 		'has_archive' => true,
