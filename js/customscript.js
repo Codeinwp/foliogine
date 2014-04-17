@@ -21,26 +21,6 @@ jQuery(document).ready(function () {
               enableCounter: false,
               enableTracking: true
             });
-    
-   if(typeof(Storage)!=="undefined") {
-       if(sessionStorage.color) {
-           var url = jQuery('#test2').text() + '/change-color/style-' + sessionStorage.color + '.css';
-           if(jQuery("#stylesheet").length == 0) {      
-               jQuery('head').append('<link rel="stylesheet" type="text/css" href="' + url + '" id="stylesheet">');
-           }    
-           else {
-                jQuery('link[id="stylesheet"]').remove();
-                jQuery('head').append('<link rel="stylesheet" type="text/css" href="' + url + '" id="stylesheet">');
-            }
-        }
-        else {
-            var url = jQuery('#test2').text() + '/change-color/style-yellow.css';
-            jQuery('head').append('<link rel="stylesheet" type="text/css" href="' + url + '" id="stylesheet">'); 
-        }
-   }
-    else {   
-        console.log("Sorry, your browser does not support web storage...");
-    }
    
     jQuery('.slider1').bxSlider({
         slideWidth: 920,

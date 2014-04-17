@@ -380,9 +380,9 @@ function cwp_add_options(){
 			add_option(cwp_config("menu_slug"),$options,"","no");
 		else
 			update_option(cwp_config("menu_slug"),$options);
-		
-		register_setting( cwp_config("menu_slug"), cwp_config("menu_slug"),  array($validator,"validate")  );
-	
+		if (function_exists('register_setting')) {
+			register_setting( cwp_config("menu_slug"), cwp_config("menu_slug"),  array($validator,"validate")  );
+		}
 }
 
 function cwp_load_defaults_callback() {

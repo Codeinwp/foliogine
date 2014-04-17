@@ -521,6 +521,7 @@ section.our-team, .contact-testimonials{
 	text-transform: uppercase;
 	line-height: 18px;
 	text-align: center;
+	
 	}
 .team-wrap a p.info span{
 	font-family: 'Open Sans', sans-serif;
@@ -1653,7 +1654,9 @@ div.line-yellow{
 	float: right;
 	}
 
-		
+.poweredby a{
+	text-decoration:none;
+}		
 /***
  Special content box
 ----------------------------*/
@@ -2290,6 +2293,7 @@ div.line-yellow{
 	font-size: 13px;
 }
 
+
 .main-navigation ul ul {
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 	display: none;
@@ -2298,7 +2302,6 @@ div.line-yellow{
 		top: 60px;
 		left: 0;
 	z-index: 99999;
-	
 }
 .main-navigation ul ul ul {
 	left: 100%;
@@ -2458,19 +2461,19 @@ textarea#comment {
 }
                 
 .puzzle-icon {
-    background-image: url(../img/icon-puzzle.png);
+    background-image: url(../img/icon-puzzle.png) !Important;
 }                
 
 .friends-icon {
-    background-image: url(../img/icon-friends.png);
+    background-image: url(../img/icon-friends.png) !Important;
 }                
 
 .direction-icon {
-    background-image: url(../img/icon-direnction.png);
+    background-image: url(../img/icon-direnction.png) !Important;
 }                
 
 .work-icon {    
-    background-image: url(../img/icon-work.png);
+    background-image: url(../img/icon-work.png) !Important;
 }          
                 
                 

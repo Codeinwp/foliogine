@@ -110,8 +110,13 @@
 							echo '<p>'.$copyright.'</p>';	
 						else: ?>		
 							<p><?php _e('Copyright','cwp'); ?> &copy; <?php the_date('Y'); ?><br><?php _e('All rights reserved.','cwp'); ?></p>
-						<?php	endif;?>		
+						<?php	endif;?>
+			
 	</div>	
+	<div class="clear"></div>
+	<div class="poweredby right">
+	<a href="http://themeisle.com/themes/foliogine-pro/?utm_source=themefooter&utm_medium=logo&utm_campaign=themefooter" target="_blank">Foliogine Pro</a><?php _e(' powered by ','cwp'); ?><a href="http://wordpress.org/" target="_blank"><?php _e('WordPress','cwp'); ?></a>
+	</div>
 	</div>	
 	</footer>
 	<?php wp_footer(); ?>

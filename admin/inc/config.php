@@ -54,6 +54,20 @@
 										)
 									)								
 								),
+								/* Color */
+								array(
+									"type"=>"group",
+									"name"=>"Color",
+									"options"=>	array(
+										array(
+											"type"=>"color",
+											"name"=>"Color",
+											"description"=>"Choose the site color",
+											"id"=>"colorid",
+											"default"=>""
+										)
+									)	
+								),
 								/* Download brochure section */
 								array(
 									"type"=>"group",

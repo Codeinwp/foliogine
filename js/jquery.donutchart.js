@@ -1,18 +1,8 @@
 (function($) {
 
 
-
- if(typeof(Storage)!=="undefined") {
-       if(sessionStorage.color) {
-           var col = sessionStorage.color;
-       }
-       else {
-           var col = 'yellow';
-       }
- }
- else {
-    var col = 'yellow';
- }    
+   var col = 'yellow';
+  
 
 
 

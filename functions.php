@@ -129,8 +129,6 @@ function cwp_scripts() {
 	
 	wp_enqueue_script( 'retina', get_template_directory_uri() . '/js/retina.js', array("jquery"), '20120206', true );
 	
-	wp_enqueue_script( 'pricing-box', get_template_directory_uri() . '/js/pricing-box.min.js', array("jquery"), '20120206', true );
-	
 	wp_enqueue_script( 'slider', get_template_directory_uri() . '/js/jquery.bxslider.min.js', array("jquery"), '20120206', true );
 	
 	wp_enqueue_script( 'skills', get_template_directory_uri() . '/js/jquery.donutchart.js', array("jquery"), '20120206', true );
@@ -528,22 +526,6 @@ function cwp_content($atts, $content = null) {
     return $output;
 }
 add_shortcode("content", "cwp_content");
-
-
-
-function cwp_load_LESS() {
-
-    print "\n<!-- Loading LESS styles and js -->\n";
-    
-    print "<link rel='stylesheet/less' id='style-less-css'  href='" . get_template_directory_uri() . "/change-color/styles.less' type='text/css' />\n";
-
-    print "<script type='text/javascript' src='" . get_template_directory_uri() . "/change-color/less-1.3.3.min.js'></script>\n\n";
-    
-    print "<script type='text/javascript' src='" . get_template_directory_uri() . "/change-color/functions.js'></script>\n\n";
-
-}
-
-add_action( 'wp_head', 'cwp_load_LESS' );
 
 function cwp_add_editor_styles() {
     add_editor_style( '/css/custom-editor-style.css' );
