@@ -530,5 +530,5 @@ add_shortcode("content", "cwp_content");
 function cwp_add_editor_styles() {
     add_editor_style( '/css/custom-editor-style.css' );
 }
-add_action( 'init', 'cwp_add_editor_styles' ); 
-
+add_action( 'init', 'cwp_add_editor_styles' );
+?>
