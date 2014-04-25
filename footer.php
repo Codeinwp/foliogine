@@ -115,7 +115,7 @@
 	</div>	
 	<div class="clear"></div>
 	<div class="poweredby right">
-	<a href="http://themeisle.com/themes/foliogine-pro/?utm_source=themefooter&utm_medium=logo&utm_campaign=themefooter" target="_blank">Foliogine Pro</a><?php _e(' powered by ','cwp'); ?><a href="http://wordpress.org/" target="_blank"><?php _e('WordPress','cwp'); ?></a>
+	<a href="http://themeisle.com/themes/foliogine-pro/?utm_source=foliogine-pro&utm_medium=link&utm_campaign=themefooter" target="_blank">Foliogine Pro</a><?php _e(' powered by ','cwp'); ?><a href="http://wordpress.org/" target="_blank"><?php _e('WordPress','cwp'); ?></a>
 	</div>
 	</div>	
 	</footer>
