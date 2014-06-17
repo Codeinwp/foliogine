@@ -330,23 +330,8 @@ function cwp_loop_callback() {
 					</p>
 				</div>
 			</a>
-			
-			<?php
-				$hover_link1 = get_post_meta($id, 'hover_link1');
-				$hover_link2 = get_post_meta($id, 'hover_link2');
-				
-				if(isset($hover_link1[0]) && $hover_link1[0] != ''):
-					echo '<a href="'.$hover_link1[0].'" class="link-icon icon-search" title="Search"></a>';
-				else:	
-					echo '<a href="#" class="link-icon icon-search" title="Search"></a>';
-				endif;
-				
-				if(isset($hover_link2[0]) && $hover_link2[0] != ''):
-					echo '<a href="'.$hover_link2[0].'" class="link-icon icon-link" title="Search"></a>';
-				else:	
-					echo '<a href="#" class="link-icon icon-link" title="Link"></a>';
-				endif;
-			?>
+			<a href="www." class="link-icon icon-search" title="Search"></a>
+			<a href="www." class="link-icon icon-link" title="Link"></a>
 		</div>
 <?php
 endwhile;		
@@ -438,14 +423,6 @@ function cwp_client() {
 	<label for="client_option">Client</label><br />
 	<input type="text" name="client_option" id="client_option" value="<?php echo get_post_meta($post->ID, 'client_option', true); ?>">
 	</p>
-	<p>
-	<label for="hover_link1">Hover link #1</label><br />
-	<input type="text" name="hover_link1" id="hover_link1" value="<?php echo get_post_meta($post->ID, 'hover_link1', true); ?>">
-	</p>
-	<p>
-	<label for="hover_link2">Hover link #2</label><br />
-	<input type="text" name="hover_link2" id="hover_link2" value="<?php echo get_post_meta($post->ID, 'hover_link2', true); ?>">
-	</p>
 	</div>
 	</fieldset>
 	<?php
@@ -476,12 +453,6 @@ function cwp_custom_add_save($postID){
 	}
 	if (isset($_POST['client_option'])) {
 		cwp_update_custom_meta($postID, $_POST['client_option'], 'client_option');
-	}
-	if (isset($_POST['hover_link2'])) {
-		cwp_update_custom_meta($postID, $_POST['hover_link2'], 'hover_link2');
-	}
-	if (isset($_POST['hover_link1'])) {
-		cwp_update_custom_meta($postID, $_POST['hover_link1'], 'hover_link1');
 	}
 }
 

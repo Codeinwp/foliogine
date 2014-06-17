@@ -238,23 +238,8 @@
 									</p>
 								</div><!-- .hover -->
 							</a>
-							
-							<?php
-								$hover_link1 = get_post_meta($id, 'hover_link1');
-								$hover_link2 = get_post_meta($id, 'hover_link2');
-								
-								if(isset($hover_link1[0]) && $hover_link1[0] != ''):
-									echo '<a href="'.$hover_link1[0].'" class="link-icon icon-search" title="Search"></a>';
-								else:	
-									echo '<a href="#" class="link-icon icon-search" title="Search"></a>';
-								endif;
-								
-								if(isset($hover_link2[0]) && $hover_link2[0] != ''):
-									echo '<a href="'.$hover_link2[0].'" class="link-icon icon-link" title="Search"></a>';
-								else:	
-									echo '<a href="#" class="link-icon icon-link" title="Link"></a>';
-								endif;
-							?>
+							<a href="www." class="link-icon icon-search" title="Search"></a>
+							<a href="www." class="link-icon icon-link" title="Link"></a>
 						</div><!-- .item-box -->
 						<?php
 					endwhile;
