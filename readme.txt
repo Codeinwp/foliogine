@@ -1,4 +1,4 @@
-= Foliogine =
+= Foliogine PRO =
 Author: codeinwp
 
 Tags: black, blue, green, red, white, one-column, two-columns, three-columns, left-sidebar, right-sidebar, flexible-width, custom-menu, editor-style, featured-images, theme-options, threaded-comments, translation-ready
@@ -8,9 +8,9 @@ Requires at least:	3.3.0
 Tested up to:		3.8.2
 
 
-Foliogine
+Foliogine PRO
 == Description ==
-Custom wordpress theme created by Codeinwp.com
+A stunning, responsive Portfolio WordPress theme excellent for an a portfolio or a blog.
 
 
 
