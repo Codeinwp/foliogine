@@ -51,12 +51,12 @@
 							&& (!isset($slider_title) || $slider_title == '')
 							&& (!isset($slider_subtitle) || $slider_subtitle == '')):
 					?>		
-							<div class="welcome-text"><?php _e('Hello and welcome, we are SweetSunday, browse our portfolio.','cwp'); ?></div>
+							<div class="welcome-text"><?php _e('Hello and welcome, we are SweetSunday, browse our portfolio.','foliogine'); ?></div>
 							<div class="ribbon hidden-phone">
 								<div class="arrow arrow-left"></div>
 								<div class="arrow arrow-right"></div>
-								<div class="text"><?php _e('Professional portfolio WordPress theme','cwp'); ?></div>
-								<div class="text-yellow hidden-tablet hidden-phone"><?php _e('Fully responsive and retina ready.','cwp'); ?></div>
+								<div class="text"><?php _e('Professional portfolio WordPress theme','foliogine'); ?></div>
+								<div class="text-yellow hidden-tablet hidden-phone"><?php _e('Fully responsive and retina ready.','foliogine'); ?></div>
 							</div>
 					<?php		
 						else:

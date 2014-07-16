@@ -43,14 +43,14 @@
         	<div class="sidebar">
 				<div class="nav-next">					
 					<?php												
-					previous_post_link('%link ','&lt; prev');							
+					previous_post_link(__('&laquo; Prev', 'foliogine'));							
 					echo ":";							
-					next_post_link('%link ','next &gt;');											
+					next_post_link(__('Next &raquo;', 'foliogine'));											
 					?>
 				</div>
 				<div class="widget">
 					<p class="title">
-						<?php _e('Item details','cwp'); ?>
+						<?php _e('Item details','foliogine'); ?>
 					</p>
 					<?php 						
 						if(isset($category_portofolio) || $category_portofolio == 'show'):				
@@ -62,7 +62,7 @@
 									}									
 								}
                                 if(isset($cat) && $cat != '') {
-                                    echo '<p><span>'.__('Category:','cwp').'</span>';
+                                    echo '<p><span>'.__('Category:','foliogine').'</span>';
 								    echo $cat;							
                                     echo '</p>';
                                 }    
@@ -71,20 +71,20 @@
 								$client = get_post_meta($idd, 'client_option');
 							
 								if(isset($client[0]) && $client[0] != ''):
-                                    echo '<p><span>'.__('Client:','cwp').'</span>';
+                                    echo '<p><span>'.__('Client:','foliogine').'</span>';
 									echo $client[0];
                                     echo '</p>';
 								endif;	
 				        endif; 											 															
 						if(isset($author_portofolio) || $author_portofolio == 'show'): ?>	
-							<p><span><?php _e('By:','cwp'); ?></span> 	  	
+							<p><span><?php _e('By:','foliogine'); ?></span> 	  	
 								<?php the_author(); ?>
 							</p>					
 					<?php endif;					
 						if(isset($tags_portofolio) && $tags_portofolio == 'show' && has_tag()):
                                     $taguri = get_the_tags(); 
                                     if(isset($taguri) && !empty($taguri)) {
-                                        echo '<p><span>'.__('Tags:','cwp').'</span>';    
+                                        echo '<p><span>'.__('Tags:','foliogine').'</span>';    
                                         foreach($taguri as $tag) 
                                         echo $tag->name.' '; 
                                         echo '</p>';
@@ -110,7 +110,7 @@
 <section class="work related-items">
 	<div class="container">		
 		<div class="title-area">
-			<h2><?php _e('Related Items','cwp'); ?></h2>
+			<h2><?php _e('Related Items','foliogine'); ?></h2>
 		</div>
 		<div class="items-work clear">
 		<?php 		
@@ -173,8 +173,22 @@
 									</p>
 								</div><!-- .hover -->
 							</a>
-							<a href="www." class="link-icon icon-search" title="Search"></a>
-							<a href="www." class="link-icon icon-link" title="Link"></a>
+							<?php
+								$hover_link1 = get_post_meta($id, 'hover_link1');
+								$hover_link2 = get_post_meta($id, 'hover_link2');
+								
+								if(isset($hover_link1[0]) && $hover_link1[0] != ''):
+									echo '<a href="'.$hover_link1[0].'" class="link-icon icon-search" title="'.__('Search','foliogine').'"></a>';
+								else:	
+									echo '<a href="#" class="link-icon icon-search" title="'.__('Search','foliogine').'"></a>';
+								endif;
+								
+								if(isset($hover_link2[0]) && $hover_link2[0] != ''):
+									echo '<a href="'.$hover_link2[0].'" class="link-icon icon-link" title="'.__('Search','foliogine').'"></a>';
+								else:	
+									echo '<a href="#" class="link-icon icon-link" title="'.__('Link','foliogine').'"></a>';
+								endif;
+							?>
 						</div><!-- .item-box -->
 						<?php
 					endwhile;
@@ -244,15 +258,15 @@
 								$hover_link2 = get_post_meta($id, 'hover_link2');
 								
 								if(isset($hover_link1[0]) && $hover_link1[0] != ''):
-									echo '<a href="'.$hover_link1[0].'" class="link-icon icon-search" title="Search"></a>';
+									echo '<a href="'.$hover_link1[0].'" class="link-icon icon-search" title="'.__('Search','foliogine').'"></a>';
 								else:	
-									echo '<a href="#" class="link-icon icon-search" title="Search"></a>';
+									echo '<a href="#" class="link-icon icon-search" title="'.__('Search','foliogine').'"></a>';
 								endif;
 								
 								if(isset($hover_link2[0]) && $hover_link2[0] != ''):
-									echo '<a href="'.$hover_link2[0].'" class="link-icon icon-link" title="Search"></a>';
+									echo '<a href="'.$hover_link2[0].'" class="link-icon icon-link" title="'.__('Search','foliogine').'"></a>';
 								else:	
-									echo '<a href="#" class="link-icon icon-link" title="Link"></a>';
+									echo '<a href="#" class="link-icon icon-link" title="'.__('Link','foliogine').'"></a>';
 								endif;
 							?>
 						</div><!-- .item-box -->

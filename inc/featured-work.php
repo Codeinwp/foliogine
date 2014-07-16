@@ -3,8 +3,8 @@
 
 					<div class="block1">
 						<div class="two-cols yellow">
-							<p class="fw-title"><?php _e('Featured Work','cwp'); ?> 
-								<span><?php _e('Browse our most creative portofio items.','cwp'); ?></span>
+							<p class="fw-title"><?php _e('Featured Work','foliogine'); ?> 
+								<span><?php _e('Browse our most creative portofio items.','foliogine'); ?></span>
 							</p>
 						</div>
 					</div><!-- .block1 -->
@@ -16,7 +16,7 @@
                                     $count_posts = wp_count_posts('product');
 		                            $nr_portofolio = $count_posts->publish; 
                                 ?>
-								<p><?php echo htmlentities($nr_portofolio); ?><span><?php _e('portfolio items','cwp'); ?></span></p>
+								<p><?php echo htmlentities($nr_portofolio); ?><span><?php _e('portfolio items','foliogine'); ?></span></p>
 							</div>
 							<div class="arrow-right"></div>
 						</div>

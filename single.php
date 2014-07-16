@@ -38,7 +38,7 @@
 						}
 						if(isset($author_single) && $author_single == 'show') {
 							$author = get_the_author();
-							echo '<p class="hidden-tablet"><span>'.__('Posted by','cwp').'</span><a href="'.get_author_posts_url( get_the_author_meta( 'ID' )).'">'.$author.'</a></p>';
+							echo '<p class="hidden-tablet"><span>'.__('Posted by','foliogine').'</span><a href="'.get_author_posts_url( get_the_author_meta( 'ID' )).'">'.$author.'</a></p>';
 						}
 						if(isset($category_single) && $category_single == 'show') {
 							
@@ -47,12 +47,12 @@
 							if(!empty($cats)) 
 								$tmp = $cats[0]->cat_name;
                             if(isset($tmp) && $tmp != '') {
-                                echo '<p class="hidden-tablet"><span>'.__('Posted in','cwp').'</span>';
+                                echo '<p class="hidden-tablet"><span>'.__('Posted in','foliogine').'</span>';
 				                echo '<a href="'.get_category_link($category[0]->cat_ID).'">'.$tmp.'</a></p>';
                             }    
 						}
 						if(isset($tags_single) && $tags_single == 'show' && has_tag()) {
-							echo '<p class="hidden-tablet"><span>'.__('Tagged with','cwp').'</span>';
+							echo '<p class="hidden-tablet"><span>'.__('Tagged with','foliogine').'</span>';
 						    the_tags('');
 							echo '</p>';		
 						} ?>										
@@ -77,7 +77,7 @@
 					<?php
 					if(isset($author_single) && $author_single == 'show') {
 						$author = get_the_author();
-						echo '<p><span>'.__('Posted by ','cwp').'</span><a href="'.get_author_posts_url( get_the_author_meta( 'ID' )).'">'.$author.'</a></p>';
+						echo '<p><span>'.__('Posted by ','foliogine').'</span><a href="'.get_author_posts_url( get_the_author_meta( 'ID' )).'">'.$author.'</a></p>';
 					}
 					if(isset($category_single) && $category_single == 'show') {
 						$category = get_the_category();
@@ -85,12 +85,12 @@
 						if(!empty($cats)) 
 							$tmp = $cats[0]->cat_name;
                         if(isset($tmp) && $tmp != '') {
-                            echo '<p><span>'.__('Posted in ','cwp').'</span>';    
+                            echo '<p><span>'.__('Posted in ','foliogine').'</span>';    
 				            echo '<a href="'.get_category_link($category[0]->cat_ID).'">'.$tmp.'</a></p>';
                         }    
 					}
 					if(isset($tags_single) && $tags_single == 'show' && has_tag()) {
-						echo '<p><span>'.__('Tagged with ','cwp').'</span>';
+						echo '<p><span>'.__('Tagged with ','foliogine').'</span>';
 						the_tags('');
 						echo '</p>';		
 					}	
@@ -98,9 +98,9 @@
 				</div><!-- .post-info-phone -->					
 			<div>
 				<p class="bottom-line">
-					<a href="#" title="<?php _e('Continue reading','cwp'); ?>" class="continue scrollup"><?php _e('Back to top','cwp'); ?> ></a>
-					<a href="#" class="icons comm" title="<?php _e('Comments','cwp'); ?>"><span></span><?php comments_number( '0', '1', '%' ); ?></a>
-					<a href="#" class="icons eye" title="<?php _e('Views','cwp'); ?>"><span></span><?php echo cwp_getPostViews(get_the_ID()); ?></a>
+					<a href="#" title="<?php _e('Back to top','foliogine'); ?>" class="continue scrollup"><?php _e('Back to top','foliogine'); ?> ></a>
+					<a href="javascript: void(0)" class="icons comm" title="<?php _e('Comments','foliogine'); ?>"><span></span><?php comments_number( '0', '1', '%' ); ?></a>
+					<a href="javascript: void(0)" class="icons eye" title="<?php _e('Views','foliogine'); ?>"><span></span><?php echo cwp_getPostViews(get_the_ID()); ?></a>
 				</p>
 			</div>
 			<br class="clear" />

@@ -63,7 +63,7 @@ function codeinwp_theme_wp_title( $title, $sep ) {
 
 	// Add a page number if necessary:
 	if ( $paged >= 2 || $page >= 2 )
-		$title .= " $sep " . sprintf( __( 'Page %s', 'codeinwp_theme' ), max( $paged, $page ) );
+		$title .= " $sep " . sprintf( __( 'Page %s', 'foliogine' ), max( $paged, $page ) );
 
 	return $title;
 }

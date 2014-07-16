@@ -47,9 +47,10 @@ function cwp_theme_setup() {
 	 * Make theme available for translation
 	 * Translations can be filed in the /languages/ directory
 	 * If you're building a theme based on Codeinwp theme, use a find and replace
-	 * to change 'cwp' to the name of your theme in all the template files
+	 * to change 'foliogine' to the name of your theme in all the template files
 	 */
-	load_theme_textdomain( 'cwp', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'foliogine', FALSE, basename( dirname( __FILE__ ) ) . '/languages/' );
+
 
 	/**
 	 * Add default posts and comments RSS feed links to head
@@ -67,7 +68,7 @@ function cwp_theme_setup() {
 	 * This theme uses wp_nav_menu() in one location.
 	 */
 	register_nav_menus( array(
-		'top_menu' => __( 'Top Menu', 'cwp' ),
+		'top_menu' => __( 'Top Menu', 'foliogine' ),
 	) );
 
 }
@@ -94,7 +95,7 @@ add_action( 'after_setup_theme', 'cwp_register_custom_background' );
  */
 function cwp_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'cwp' ),
+		'name'          => __( 'Sidebar', 'foliogine' ),
 		'id'            => 'sidebar-1',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
@@ -109,7 +110,13 @@ add_action( 'widgets_init', 'cwp_widgets_init' );
  */
 function cwp_scripts() {
 
-	wp_enqueue_style( 'cwp-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'bootstrap', get_template_directory_uri().'/css/bootstrap.css' );
+	
+	wp_enqueue_style( 'bootstrap-responsive', get_template_directory_uri().'/css/bootstrap-responsive.css' );
+
+	wp_enqueue_style( 'cwp-style', get_stylesheet_uri(), array('bootstrap', 'bootstrap-responsive') );
+	
+	wp_style_add_data( 'cwp-style', 'rtl', 'replace' );
 	
 	wp_enqueue_script('jquery');
     
@@ -190,7 +197,7 @@ function cwp_comment($comment, $args, $depth) {
                 <p>By <span><?php comment_author($cid); ?></span> on <?php echo get_comment_date('F d, Y'); ?></p>
                 <p><?php comment_text() ?></p>
                 <?php if ($comment->comment_approved == '0') : ?>
-                        <em class="comment-awaiting-moderation"><?php _e('Your comment is awaiting moderation.','cwp') ?></em>
+                        <em class="comment-awaiting-moderation"><?php _e('Your comment is awaiting moderation.','foliogine') ?></em>
                         <br />
                 <?php endif; ?>
                 <div class="reply">
@@ -207,8 +214,8 @@ function cwp_create_post_type() {
   register_post_type( 'product',
 		array(
 			'labels' => array(
-				'name' => __( 'Portofolio','cwp' ),
-				'singular_name' => __( 'Portofolio','cwp' )
+				'name' => __( 'Portofolio','foliogine' ),
+				'singular_name' => __( 'Portofolio','foliogine' )
 			),
 		'public' => true,
 		'has_archive' => true,
@@ -229,7 +236,7 @@ function cwp_build_taxonomies() {
 add_action('admin_menu', 'cwp_post_options_box');
 
 function cwp_post_options_box() {
-	add_meta_box('post_info', 'Testimonial section', 'cwp_custom_post_info', 'page', 'side', 'low');
+	add_meta_box('post_info', __('Testimonial section','foliogine'), 'cwp_custom_post_info', 'page', 'side', 'low');
 }
 
 //Adds the actual option box
@@ -239,23 +246,23 @@ function cwp_custom_post_info() {
 	<fieldset id="mycustom-div">
 	<div>
 	<p>
-	<label for="cwp_dropdown_options" >Show or hide testimonial on this page/post :</label><br />
+	<label for="cwp_dropdown_options" ><?php _e( 'Show or hide testimonial on this page/post','foliogine' ); ?> :</label><br />
 	<select name="cwp_dropdown_options" id="cwp_dropdown_options">
-	<option<?php selected( get_post_meta($post->ID, 'cwp_dropdown_options', true), 'Hide' ); ?>>Hide</option>
-	<option<?php selected( get_post_meta($post->ID, 'cwp_dropdown_options', true), 'Show' ); ?>>Show</option>
+	<option<?php selected( get_post_meta($post->ID, 'cwp_dropdown_options', true), 'Hide' ); ?>><?php _e('Hide','foliogine'); ?></option>
+	<option<?php selected( get_post_meta($post->ID, 'cwp_dropdown_options', true), 'Show' ); ?>><?php _e('Show','foliogine'); ?></option>
 	</select>
 	<br />
 	<br />
-	<label for="cwp_title_option">Testimonial title:</label><br />
+	<label for="cwp_title_option"><?php _e( 'Testimonial title: ','foliogine' ); ?></label><br />
 	<input type="text" name="cwp_title_option" id="cwp_title_option" value="<?php echo get_post_meta($post->ID, 'cwp_title_option', true); ?>">
 	<br />
-	<label for="cwp_text_option">Testimonial text:</label><br />
+	<label for="cwp_text_option"><?php _e( 'Testimonial text:','foliogine' ); ?></label><br />
 	<input type="text" name="cwp_text_option" id="cwp_text_option" value="<?php echo get_post_meta($post->ID, 'cwp_text_option', true); ?>">
 	<br />
-	<label for="cwp_author_option">Testimonial author:</label><br />
+	<label for="cwp_author_option"><?php _e( 'Testimonial author:','foliogine' ); ?></label><br />
 	<input type="text" name="cwp_author_option" id="cwp_author_option" value="<?php echo get_post_meta($post->ID, 'cwp_author_option', true); ?>">
 	<br />
-	<label for="cwp_info_option">Testimonial author details:</label><br />
+	<label for="cwp_info_option"><?php _e( 'Testimonial author details:','foliogine' ); ?></label><br />
 	<input type="text" name="cwp_info_option" id="cwp_info_option" value="<?php echo get_post_meta($post->ID, 'cwp_info_option', true); ?>">
 	</p>
 	</div>
@@ -336,15 +343,15 @@ function cwp_loop_callback() {
 				$hover_link2 = get_post_meta($id, 'hover_link2');
 				
 				if(isset($hover_link1[0]) && $hover_link1[0] != ''):
-					echo '<a href="'.$hover_link1[0].'" class="link-icon icon-search" title="Search"></a>';
+					echo '<a href="'.$hover_link1[0].'" class="link-icon icon-search" title="'.__( 'Search','foliogine' ).'"></a>';
 				else:	
-					echo '<a href="#" class="link-icon icon-search" title="Search"></a>';
+					echo '<a href="#" class="link-icon icon-search" title="'.__( 'Search','foliogine' ).'"></a>';
 				endif;
 				
 				if(isset($hover_link2[0]) && $hover_link2[0] != ''):
-					echo '<a href="'.$hover_link2[0].'" class="link-icon icon-link" title="Search"></a>';
+					echo '<a href="'.$hover_link2[0].'" class="link-icon icon-link" title="'.__( 'Search','foliogine' ).'"></a>';
 				else:	
-					echo '<a href="#" class="link-icon icon-link" title="Link"></a>';
+					echo '<a href="#" class="link-icon icon-link" title="'.__('Link','foliogine').'"></a>';
 				endif;
 			?>
 		</div>
@@ -368,9 +375,9 @@ endwhile;
 ?>
 	<div class="clear"></div>
 	<div class="load-more">
-		<a href="javascript:void(0);" title="Load more" class="view_more loadmore-article">
+		<a href="javascript:void(0);" title="<?php _e('Load more','foliogine'); ?>" class="view_more loadmore-article">
 			<p class="circle"></p>
-			<p><?php _e('Load more items','cwp'); ?></p>
+			<p><?php _e('Load more items','foliogine'); ?></p>
 		</a>
 	</div><!-- .load-more -->
 <?php }   
@@ -408,7 +415,7 @@ function cwp_setPostViews($postID) {
 add_filter('manage_posts_columns', 'cwp_posts_column_views');
 add_action('manage_posts_custom_column', 'cwp_posts_custom_column_views',5,2);
 function cwp_posts_column_views($defaults){
-    $defaults['post_views'] = __('Views','cwp');
+    $defaults['post_views'] = __('Views','foliogine');
     return $defaults;
 }
 function cwp_posts_custom_column_views($column_name, $id){
@@ -425,7 +432,7 @@ function cwp_posts_custom_column_views($column_name, $id){
 add_action('admin_menu', 'cwp_client_metabox');
  
 function cwp_client_metabox() {
-        add_meta_box('post_info', 'Client', 'cwp_client', 'product', 'side', 'high');
+        add_meta_box('post_info', __('Client','foliogine'), 'cwp_client', 'product', 'side', 'high');
 }
  
 //Adds the actual option box
@@ -435,15 +442,15 @@ function cwp_client() {
 	<fieldset id="mycustom-div">
 	<div>
 	<p>
-	<label for="client_option">Client</label><br />
+	<label for="client_option"><?php _e('Client','foliogine'); ?></label><br />
 	<input type="text" name="client_option" id="client_option" value="<?php echo get_post_meta($post->ID, 'client_option', true); ?>">
 	</p>
 	<p>
-	<label for="hover_link1">Hover link #1</label><br />
+	<label for="hover_link1"><?php _e('Hover link','foliogine'); ?> #1</label><br />
 	<input type="text" name="hover_link1" id="hover_link1" value="<?php echo get_post_meta($post->ID, 'hover_link1', true); ?>">
 	</p>
 	<p>
-	<label for="hover_link2">Hover link #2</label><br />
+	<label for="hover_link2"><?php _e('Hover link','foliogine'); ?> #2</label><br />
 	<input type="text" name="hover_link2" id="hover_link2" value="<?php echo get_post_meta($post->ID, 'hover_link2', true); ?>">
 	</p>
 	</div>

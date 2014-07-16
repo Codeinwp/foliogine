@@ -130,10 +130,10 @@ endif;
 footer, section.latest-work, .image-wrap, .ribbon, .team-wrap{
 	border-color: <?php echo $colorid; ?>;
 }	
-.ribbon .arrow-left, .team-wrap .arrow-left{
+.image-wrap .arrow-left, .ribbon .arrow-left, .team-wrap .arrow-left{
 	border-right: 8px solid  <?php echo $colorid; ?>;
 }
-.ribbon .arrow-right, .team-wrap .arrow-right{
+.image-wrap .arrow-right, .ribbon .arrow-right, .team-wrap .arrow-right{
 	border-left: 8px solid <?php echo $colorid; ?>;
 }
 .arrow-small{

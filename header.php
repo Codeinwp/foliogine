@@ -40,7 +40,7 @@
     <header>
     
     <span id="test2" style="display:none;"><?php echo get_template_directory_uri(); ?></span> 
-        <?php get_template_part('change-color/change-color'); ?>
+       
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
@@ -60,7 +60,7 @@
                     echo '<img src="'.$logo.'" alt="'.get_bloginfo('name').'">';
 				endif;	
             else:
-				echo '<img src="'.get_template_directory_uri().'/img/logo.png" alt="Foliogine">';
+				echo '<img src="'.get_template_directory_uri().'/img/logo.png" alt="'.get_bloginfo('name').'">';
 			endif;
 			?>
           </a>

@@ -21,46 +21,46 @@
 		<h1>
 			<?php
 			if ( is_category() ) :
-				printf( __( 'Category Archives: %s', 'cwp' ), '<span>' . single_cat_title( '', false ) . '</span>' );
+				printf( __( 'Category Archives: %s', 'foliogine' ), '<span>' . single_cat_title( '', false ) . '</span>' );
 			elseif ( is_tag() ) :
-				printf( __( 'Tag Archives: %s', 'cwp' ), '<span>' . single_tag_title( '', false ) . '</span>' );
+				printf( __( 'Tag Archives: %s', 'foliogine' ), '<span>' . single_tag_title( '', false ) . '</span>' );
 			elseif ( is_author() ) :
 							/* Queue the first post, that way we know
 							 * what author we're dealing with (if that is the case).
 							*/
 							the_post();
-							printf( __( 'Author Archives: %s', 'cwp' ), '<span class="vcard">' . get_the_author() . '</span>' );
+							printf( __( 'Author Archives: %s', 'foliogine' ), '<span class="vcard">' . get_the_author() . '</span>' );
 							/* Since we called the_post() above, we need to
 							 * rewind the loop back to the beginning that way
 							 * we can run the loop properly, in full.
 							 */
 							rewind_posts();
 			elseif ( is_day() ) :
-				printf( __( 'Daily Archives: %s', 'cwp' ), '<span>' . get_the_date() . '</span>' );
+				printf( __( 'Daily Archives: %s', 'foliogine' ), '<span>' . get_the_date() . '</span>' );
 
 			elseif ( is_month() ) :
-				printf( __( 'Monthly Archives: %s', 'cwp' ), '<span>' . get_the_date( 'F Y' ) . '</span>' );
+				printf( __( 'Monthly Archives: %s', 'foliogine' ), '<span>' . get_the_date( 'F Y' ) . '</span>' );
 
 			elseif ( is_year() ) :
-				printf( __( 'Yearly Archives: %s', 'cwp' ), '<span>' . get_the_date( 'Y' ) . '</span>' );
+				printf( __( 'Yearly Archives: %s', 'foliogine' ), '<span>' . get_the_date( 'Y' ) . '</span>' );
 
 			elseif ( is_tax( 'post_format', 'post-format-aside' ) ) :
-				_e( 'Asides', 'cwp' );
+				_e( 'Asides', 'foliogine' );
 
 			elseif ( is_tax( 'post_format', 'post-format-image' ) ) :
-				_e( 'Images', 'cwp');
+				_e( 'Images', 'foliogine');
 
 			elseif ( is_tax( 'post_format', 'post-format-video' ) ) :
-				_e( 'Videos', 'cwp' );
+				_e( 'Videos', 'foliogine' );
 
 			elseif ( is_tax( 'post_format', 'post-format-quote' ) ) :
-				_e( 'Quotes', 'cwp' );
+				_e( 'Quotes', 'foliogine' );
 
 			elseif ( is_tax( 'post_format', 'post-format-link' ) ) :
-				_e( 'Links', 'cwp' );
+				_e( 'Links', 'foliogine' );
 
 			else :
-				_e( 'Archives', 'cwp' );
+				_e( 'Archives', 'foliogine' );
 
 			endif;
 			?>
@@ -85,10 +85,10 @@
 					}	
 					if(isset($the_author) && $the_author == 'show') {
 						$author = get_the_author();
-						echo '<p class="hidden-tablet"><span>'.__('Posted by','cwp').'</span><a href="'.get_author_posts_url( get_the_author_meta( 'ID' )).'">'.$author.'</a></p>';
+						echo '<p class="hidden-tablet"><span>'.__('Posted by','foliogine').'</span><a href="'.get_author_posts_url( get_the_author_meta( 'ID' )).'">'.$author.'</a></p>';
 					}
 					if(isset($the_category) && $the_category == 'show') {
-						echo '<p class="hidden-tablet"><span>'.__('Posted in','cwp').'</span>';
+						echo '<p class="hidden-tablet"><span>'.__('Posted in','foliogine').'</span>';
 						$category = get_the_category();
 						$cats = get_the_category($post->ID); 
 						if(!empty($cats)) 
@@ -96,7 +96,7 @@
 						echo '<a href="'.get_category_link($category[0]->cat_ID).'">'.$tmp.'</a></p>';
 					}
 					if(isset($tags) && $tags == 'show' && has_tag()) {
-						echo '<p class="hidden-tablet"><span>'.__('Tagged with','cwp').'</span>';
+						echo '<p class="hidden-tablet"><span>'.__('Tagged with','foliogine').'</span>';
 						the_tags('');
 						echo '</p>';		
 					}	
@@ -120,11 +120,11 @@
 						<?php
 							if(isset($the_author) && $the_author == 'show') {
 								$author = get_the_author();
-								echo '<p><span>'.__('Posted by','cwp').'</span><a href="'.get_author_posts_url( get_the_author_meta( 'ID' )).'">'.$author.'</a></p>';
+								echo '<p><span>'.__('Posted by','foliogine').'</span><a href="'.get_author_posts_url( get_the_author_meta( 'ID' )).'">'.$author.'</a></p>';
 							}
 							if(isset($the_category) && $the_category == 'show') {
 								$author = get_the_author();
-								echo '<p><span>'.__('Posted in','cwp').'</span>';
+								echo '<p><span>'.__('Posted in','foliogine').'</span>';
 								$category = get_the_category();
 								$cats = get_the_category($post->ID); 
 								if(!empty($cats)) 
@@ -132,16 +132,16 @@
 								echo '<a href="'.get_category_link($category[0]->cat_ID).'">'.$tmp.'</a></p>';
 							}
 							if(isset($tags) && $tags == 'show' && has_tag()) {
-									echo '<p><span>'.__('Tagged width','cwp').'</span>';
+									echo '<p><span>'.__('Tagged width','foliogine').'</span>';
 									the_tags('');
 									echo '</p>';
 							}	
 						?>
 						</div><!-- .post-info-phone -->
 						<p class="bottom-line">
-							<a href="<?php echo get_permalink($post->ID);?>" title="<?php _e('Continue reading','cwp'); ?>" class="continue"><?php _e('Continue reading','cwp'); ?> ></a>
-							<a class="icons comm" title="<?php _e('Comments','cwp'); ?>"><span></span><?php comments_number( '0', '1', '%' ); ?></a>
-							<a class="icons eye" title="<?php _e('Views','cwp');?>"><span></span><?php echo cwp_getPostViews(get_the_ID()); ?></a>
+							<a href="<?php echo get_permalink($post->ID);?>" title="<?php _e('Continue reading','foliogine'); ?>" class="continue"><?php _e('Continue reading','foliogine'); ?> ></a>
+							<a class="icons comm" title="<?php _e('Comments','foliogine'); ?>"><span></span><?php comments_number( '0', '1', '%' ); ?></a>
+							<a class="icons eye" title="<?php _e('Views','foliogine');?>"><span></span><?php echo cwp_getPostViews(get_the_ID()); ?></a>
 						</p><!-- .bottom-line -->
 					</div><!-- .post-img -->
 				</div><!-- .list-post-content -->
@@ -155,8 +155,8 @@
 			<div class="pagination-wrap">
 				
 				<p class="right">
-					<?php previous_posts_link( __( 'Prev', 'cwp' ) ); ?>
-					<?php next_posts_link( __( 'Next', 'cwp' ) ); ?>
+					<?php previous_posts_link( __( 'Prev', 'foliogine' ) ); ?>
+					<?php next_posts_link( __( 'Next', 'foliogine' ) ); ?>
 				</p>
 				
 			</div><!-- /pagination-->

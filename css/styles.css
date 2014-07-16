@@ -9,8 +9,7 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
 /* font-family: 'Open Sans', sans-serif; font-weight: 400; */
 
-@import url('bootstrap.css');
-@import url('bootstrap-responsive.css');
+
 
 
 body{ 
@@ -98,7 +97,7 @@ section.slider .container{
 	position: absolute;
 	margin-top: 200px;
 	height: 60px;
-	width: 99%;;
+	width: 99%;
 	border-width: 4px;
 	border-style: solid;
 	border-bottom: none;

@@ -7,7 +7,7 @@
 						if(isset($testimonial_title) && $testimonial_title != ''):
 							echo '<h2>'.htmlentities($testimonial_title).'</h2>';
 						else:
-							echo '<h2>'.__('Testimonial title','cwp').'</h2>';
+							echo '<h2>'.__('Testimonial title','foliogine').'</h2>';
 						endif; 
 					?>	         
 					<div class="testimonial-box">
@@ -15,7 +15,7 @@
 							if(isset($testimonial_content) && $testimonial_content != ''):
 								echo '<p class="text">'.htmlentities($testimonial_content).'</p>'; 
 							else:
-								echo '<p class="text">'.__('Testimonial text','cwp').'</p>';
+								echo '<p class="text">'.__('Testimonial text','foliogine').'</p>';
 							endif; 
 						?>	
 						<p class="client-info"><a><?php if(isset($testimonial_author) && $testimonial_author != '') echo htmlentities($testimonial_author).' '; ?><span><?php if(isset($testimonial_info) && $testimonial_info != '') echo htmlentities($testimonial_info).' '; ?></span></a></p>

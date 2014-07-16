@@ -3,7 +3,7 @@
 			<div class="container">
                 <?php 					if(isset($download_text) && $download_text != ''):
 						echo '<a class="text">'.$download_text.'</a>';					endif;
-					if(isset($download_title) && $download_title != '' && isset($download_url) && $download_url != ''):						echo '<a href="'.$download_url.'" class="button" title="Download">'.$download_title.'</a>';					endif;					?>        
+					if(isset($download_title) && $download_title != '' && isset($download_url) && $download_url != ''):						echo '<a href="'.$download_url.'" class="button" title="'.__('Download','foliogine').'">'.$download_title.'</a>';					endif;					?>        
 			</div><!-- .container -->
 		</section><!-- .download -->
 <?php endif; ?>

@@ -1,7 +1,7 @@
 <?php	$team_image1 = cwp('team_image1');	$team_image2 = cwp('team_image2');	$team_image3 = cwp('team_image3');	$team_image4 = cwp('team_image4');		$team_name1 = cwp('team_name1');	$team_name2 = cwp('team_name2');	$team_name3 = cwp('team_name3');	$team_name4 = cwp('team_name4');		$team_job1 = cwp('team_job1');	$team_job2 = cwp('team_job2');	$team_job3 = cwp('team_job3');	$team_job4 = cwp('team_job4');?>  
     <section class="our-team">
 			<div class="container">
-				<h2><?php _e('OUR TEAM','cwp'); ?></h2>
+				<h2><?php _e('OUR TEAM','foliogine'); ?></h2>
 					
 				<div class="team-wrap">
 					<?php 

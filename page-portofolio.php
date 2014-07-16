@@ -22,7 +22,7 @@ Template Name: Portofolio
 	
 	if(isset($portofolio_categories) && $portofolio_categories == 'show'):
 ?>
-			<span id="ascuns"><?php _e('Show','cwp'); ?></span>
+			<span id="ascuns"><?php _e('Show','foliogine'); ?></span>
 			<section class="work">
 				<div class="container">
 					<?php					
@@ -30,7 +30,7 @@ Template Name: Portofolio
 					$tax_terms = get_terms($taxonomy);
 					?>
 					<div class="breadcrumb">
-						<a href="#" title="all" class="active categories all" id="catbutton"><?php _e('all','cwp'); ?></a>
+						<a href="#" title="all" class="active categories all" id="catbutton"><?php _e('all','foliogine'); ?></a>
 						<?php		
 						foreach ($tax_terms as $tax_term) {	
 							echo ' / <a href="#" title="'.$tax_term->name.'" id="catbutton" class="'.$tax_term->term_id.' categories">' . $tax_term->name.'</a>';
@@ -50,7 +50,7 @@ Template Name: Portofolio
 	else:
 		
 ?>
-		<span id="ascuns"><?php _e('Hide','cwp'); ?></span>
+		<span id="ascuns"><?php _e('Hide','foliogine'); ?></span>
 		<section class="work">
 			<div class="container">					
 				<div class="items-work mt50" id="mycontent">

@@ -30,25 +30,25 @@
 			self::$structure	= array(
 						array(
 							 "type"=>"tab",
-							 "name"=>"General options",
+							 "name"=>__("General options",'foliogine'),
 							 "options"=>array(
 								/* Logo */
 								array(
 									"type"=>"group",
-									"name"=>"Logo",
+									"name"=>__("Logo",'foliogine'),
 									"options"=>	array(
 										array(
 									
 											"type"=>"image",
-											"name"=>"Logo",
-											"description"=>"Logo",
+											"name"=>__("Logo",'foliogine'),
+											"description"=>__("Logo",'foliogine'),
 											"id"=>"logo_image",
 											"default"=> "" 
 										),
 										array(
 											"type"=>"input_text",
-											"name"=>"Logo text",
-											"description"=>"Logo text",
+											"name"=>__("Logo text",'foliogine'),
+											"description"=>__("Logo text",'foliogine'),
 											"id"=>"logo_text",
 											"default"=>""
 										)
@@ -57,12 +57,12 @@
 								/* Color */
 								array(
 									"type"=>"group",
-									"name"=>"Color",
+									"name"=>__("Color",'foliogine'),
 									"options"=>	array(
 										array(
 											"type"=>"color",
-											"name"=>"Color",
-											"description"=>"Choose the site color",
+											"name"=>__("Color",'foliogine'),
+											"description"=>__("Choose the site color",'foliogine'),
 											"id"=>"colorid",
 											"default"=>""
 										)
@@ -71,57 +71,57 @@
 								/* Download brochure section */
 								array(
 									"type"=>"group",
-									"name"=>"Download brochure section options",
+									"name"=>__("Download brochure section options",'foliogine'),
 									"options"=>	array(
 										array(
 									
 											"type"=>"multiselect",
-											"name"=>"Select all the pages where you want this section to appear",
-											"description"=>"Hold down the control (ctrl) button to select multiple options",
+											"name"=>__("Select all the pages where you want this section to appear",'foliogine'),
+											"description"=>__("Hold down the control (ctrl) button to select multiple options",'foliogine'),
 											"id"=>"download_select",
 											"options"=> $all_pages,
 											"default"=> $default_pages
 										),
 										array(
 											"type"=>"select",
-											"name"=>"Archive page",
-											"description"=>"Show or hide download brochure section in the archive page.",
+											"name"=>__("Archive page",'foliogine'),
+											"description"=>__("Show or hide download brochure section in the archive page.",'foliogine'),
 											"id"=>"download_archive",
 											"options"=>array(
-												"hide"=>"Hide",
-												"show"=>"Show"
+												"hide"=>__("Hide",'foliogine'),
+												"show"=>__("Show",'foliogine')
 											),
 											"default"=>"hide"
 										),
 										array(
 											"type"=>"select",
-											"name"=>"Search page",
-											"description"=>"Show or hide download brochure section in the search page.",
+											"name"=>__("Search page",'foliogine'),
+											"description"=>__("Show or hide download brochure section in the search page.",'foliogine'),
 											"id"=>"download_search",
 											"options"=>array(
-												"hide"=>"Hide",
-												"show"=>"Show"
+												"hide"=>__("Hide",'foliogine'),
+												"show"=>__("Show",'foliogine')
 											),
 											"default"=>"hide"
 										),
 										array(
 											"type"=>"input_text",
-											"name"=>"Download brochure text left side",
-											"description"=>"Enter a text to appear in the left side of the download brochure button.",
+											"name"=>__("Download brochure text left side",'foliogine'),
+											"description"=>__("Enter a text to appear in the left side of the download brochure button.",'foliogine'),
 											"id"=>"download_text",
 											"default"=>""
 										),
 										array(
 											"type"=>"input_text",
-											"name"=>"Title for the Download brochure button",
-											"description"=>"Enter a title to appear on the download brochure button.",
+											"name"=>__("Title for the Download brochure button",'foliogine'),
+											"description"=>__("Enter a title to appear on the download brochure button.",'foliogine'),
 											"id"=>"download_title",
 											"default"=>""
 										),
 										array(
 											"type"=>"input_text",
-											"name"=>"Link for the Download brochure button",
-											"description"=>"Enter the link of the download brochure button.",
+											"name"=>__("Link for the Download brochure button",'foliogine'),
+											"description"=>__("Enter the link of the download brochure button.",'foliogine'),
 											"id"=>"download_url",
 											"default"=>""
 										)
@@ -130,81 +130,81 @@
 								/* Slider section */
 								array(
 									"type"=>"group",
-									"name"=>"Slider section options",
+									"name"=>__("Slider section options",'foliogine'),
 									"options"=>	array(
 										array(
 									
 											"type"=>"multiselect",
-											"name"=>"Select all the pages where you want this section to appear",
-											"description"=>"Hold down the control (ctrl) button to select multiple options",
+											"name"=>__("Select all the pages where you want this section to appear",'foliogine'),
+											"description"=>__("Hold down the control (ctrl) button to select multiple options",'foliogine'),
 											"id"=>"slider_select",
 											"options"=> $all_pages,
 											"default"=> $default_pages
 										),
 										array(
 											"type"=>"select",
-											"name"=>"Archive page",
-											"description"=>"Show or hide slider section in the archive page.",
+											"name"=>__("Archive page",'foliogine'),
+											"description"=>__("Show or hide slider section in the archive page.",'foliogine'),
 											"id"=>"slider_archive",
 											"options"=>array(
-												"hide"=>"Hide",
-												"show"=>"Show"
+												"hide"=>__("Hide",'foliogine'),
+												"show"=>__("Show",'foliogine')
 											),
 											"default"=>"hide"
 										),
 										array(
 											"type"=>"select",
-											"name"=>"Search page",
-											"description"=>"Show or hide slider section in the search page.",
+											"name"=>__("Search page",'foliogine'),
+											"description"=>__("Show or hide slider section in the search page.",'foliogine'),
 											"id"=>"slider_search",
 											"options"=>array(
-												"hide"=>"Hide",
-												"show"=>"Show"
+												"hide"=>__("Hide",'foliogine'),
+												"show"=>__("Show",'foliogine')
 											),
 											"default"=>"hide"
 										),
 										array(
 											"type"=>"input_text",
-											"name"=>"Slider big title",
-											"description"=>"Enter a big title for the slider.",
+											"name"=>__("Slider big title",'foliogine'),
+											"description"=>__("Enter a big title for the slider.",'foliogine'),
 											"id"=>"slider_bigtitle",
 											"default"=>""
 										),
 										array(
 											"type"=>"input_text",
-											"name"=>"Slider title",
-											"description"=>"Enter a title for the slider.",
+											"name"=>__("Slider title",'foliogine'),
+											"description"=>__("Enter a title for the slider.",'foliogine'),
 											"id"=>"slider_title",
 											"default"=>""
 										),
 										array(
 											"type"=>"input_text",
-											"name"=>"Slider subtitle",
-											"description"=>"Enter a subtitle for the slider.",
+											"name"=>__("Slider subtitle",'foliogine'),
+											"description"=>__("Enter a subtitle for the slider.",'foliogine'),
 											"id"=>"slider_subtitle",
 											"default"=>""
 										),
 										array(
 									
 											"type"=>"image",
-											"name"=>"Slide image 1",
-											"description"=>"Slide image 1",
+											"name"=>__("Slide image 1",'foliogine'),
+											"description"=>__("Slide image 1",'foliogine'),
 											"id"=>"slide_image1",
 											"default"=> "" 
 										),
 										array(
 									
 											"type"=>"image",
-											"name"=>"Slide image 2",
-											"description"=>"Slide image 2",
+											"name"=>__("Slide image 2",'foliogine'),
+											"description"=>__("Slide image 2",'foliogine'),
 											"id"=>"slide_image2",
 											"default"=> "" 
 										),
 										array(
 									
 											"type"=>"image",
-											"name"=>"Slide image 3",
-											"description"=>"Slide image 3",
+											"name"=>__("Slide image 3",'foliogine'),
+											"description"=>__("Slide image 3",'foliogine'),
 											"id"=>"slide_image3",
 											"default"=> "" 
 										)
@@ -213,21 +213,21 @@
 								/* Featured work */
 								array(
 									"type"=>"group",
-									"name"=>"Featured work section options (must have at least 3 products)",
+									"name"=>__("Featured work section options (must have at least 3 products)",'foliogine'),
 									"options"=>	array(
 										array(
 									
 											"type"=>"multiselect",
-											"name"=>"Select all the pages where you want this section to appear",
-											"description"=>"Hold down the control (ctrl) button to select multiple options",
+											"name"=>__("Select all the pages where you want this section to appear",'foliogine'),
+											"description"=>__("Hold down the control (ctrl) button to select multiple options",'foliogine'),
 											"id"=>"featured_select",
 											"options"=> $all_pages,
 											"default"=> $default_pages
 										),
 										array(
 											"type"=>"select",
-											"name"=>"Archive page",
-											"description"=>"Show or hide featured work section in the archive page.",
+											"name"=>__("Archive page",'foliogine'),
+											"description"=>__("Show or hide featured work section in the archive page.",'foliogine'),
 											"id"=>"featured_archive",
 											"options"=>array(
 												"hide"=>"Hide",
@@ -237,12 +237,12 @@
 										),
 										array(
 											"type"=>"select",
-											"name"=>"Search page",
-											"description"=>"Show or hide featured work section in the search page.",
+											"name"=>__("Search page",'foliogine'),
+											"description"=>__("Show or hide featured work section in the search page.",'foliogine'),
 											"id"=>"featured_search",
 											"options"=>array(
-												"hide"=>"Hide",
-												"show"=>"Show"
+												"hide"=>__("Hide",'foliogine'),
+												"show"=>__("Show",'foliogine')
 											),
 											"default"=>"hide"
 										)
@@ -251,36 +251,36 @@
 								/* Latest work */
 								array(
 									"type"=>"group",
-									"name"=>"Latest work section options",
+									"name"=>__("Latest work section options",'foliogine'),
 									"options"=>	array(
 										array(
 									
 											"type"=>"multiselect",
-											"name"=>"Select all the pages where you want this section to appear",
-											"description"=>"Hold down the control (ctrl) button to select multiple options",
+											"name"=>__("Select all the pages where you want this section to appear",'foliogine'),
+											"description"=>__("Hold down the control (ctrl) button to select multiple options",'foliogine'),
 											"id"=>"latest_select",
 											"options"=> $all_pages,
 											"default"=> $default_pages
 										),
 										array(
 											"type"=>"select",
-											"name"=>"Archive page",
-											"description"=>"Show or hide latest work section in the archive page.",
+											"name"=>__("Archive page",'foliogine'),
+											"description"=>__("Show or hide latest work section in the archive page.",'foliogine'),
 											"id"=>"latest_archive",
 											"options"=>array(
-												"hide"=>"Hide",
-												"show"=>"Show"
+												"hide"=>__("Hide",'foliogine'),
+												"show"=>__("Show",'foliogine')
 											),
 											"default"=>"hide"
 										),
 										array(
 											"type"=>"select",
-											"name"=>"Search page",
-											"description"=>"Show or hide latest work section in the search page.",
+											"name"=>__("Search page",'foliogine'),
+											"description"=>__("Show or hide latest work section in the search page.",'foliogine'),
 											"id"=>"latest_search",
 											"options"=>array(
-												"hide"=>"Hide",
-												"show"=>"Show"
+												"hide"=>__("Hide",'foliogine'),
+												"show"=>__("Show",'foliogine')
 											),
 											"default"=>"hide"
 										)
@@ -289,124 +289,124 @@
 								/* Our services */
 								array(
 									"type"=>"group",
-									"name"=>"Our services section options",
+									"name"=>__("Our services section options",'foliogine'),
 									"options"=>	array(
 										array(
 									
 											"type"=>"multiselect",
-											"name"=>"Select all the pages where you want this section to appear",
-											"description"=>"Hold down the control (ctrl) button to select multiple options",
+											"name"=>__("Select all the pages where you want this section to appear",'foliogine'),
+											"description"=>__("Hold down the control (ctrl) button to select multiple options",'foliogine'),
 											"id"=>"services_select",
 											"options"=> $all_pages,
 											"default"=> $default_pages
 										),
 										array(
 											"type"=>"select",
-											"name"=>"Archive page",
-											"description"=>"Show or hide our services section in the archive page.",
+											"name"=>__("Archive page",'foliogine'),
+											"description"=>__("Show or hide our services section in the archive page.",'foliogine'),
 											"id"=>"services_archive",
 											"options"=>array(
-												"hide"=>"Hide",
-												"show"=>"Show"
+												"hide"=>__("Hide",'foliogine'),
+												"show"=>__("Show",'foliogine')
 											),
 											"default"=>"hide"
 										),
 										array(
 											"type"=>"select",
-											"name"=>"Search page",
-											"description"=>"Show or hide our services section in the search page.",
+											"name"=>__("Search page",'foliogine'),
+											"description"=>__("Show or hide our services section in the search page.",'foliogine'),
 											"id"=>"services_search",
 											"options"=>array(
-												"hide"=>"Hide",
-												"show"=>"Show"
+												"hide"=>__("Hide",'foliogine'),
+												"show"=>__("Show",'foliogine')
 											),
 											"default"=>"hide"
 										),
 										array(
 									
 											"type"=>"image",
-											"name"=>"Image 1",
+											"name"=>__("Image 1",'foliogine'),
 											"description"=>"",
 											"id"=>"services_image1",
 											"default"=> "" 
 										),
 										array(
 											"type"=>"input_text",
-											"name"=>"Title 1",
-											"description"=>"Enter the first service title",
+											"name"=>__("Title 1",'foliogine'),
+											"description"=>__("Enter the first service title",'foliogine'),
 											"id"=>"services_title1",
 											"default"=>""
 										),
 										array(
 											"type"=>"input_text",
-											"name"=>"Text 1",
-											"description"=>"Enter the first service text",
+											"name"=>__("Text 1",'foliogine'),
+											"description"=>__("Enter the first service text",'foliogine'),
 											"id"=>"services_text1",
 											"default"=>""
 										),
 										array(
 									
 											"type"=>"image",
-											"name"=>"Image 2",
+											"name"=>__("Image 2",'foliogine'),
 											"description"=>"",
 											"id"=>"services_image2",
 											"default"=> "" 
 										),
 										array(
 											"type"=>"input_text",
-											"name"=>"Title 2",
-											"description"=>"Enter the second service title",
+											"name"=>__("Title 2",'foliogine'),
+											"description"=>__("Enter the second service title",'foliogine'),
 											"id"=>"services_title2",
 											"default"=>""
 										),
 										array(
 											"type"=>"input_text",
-											"name"=>"Text 2",
-											"description"=>"Enter the second service text",
+											"name"=>__("Text 2",'foliogine'),
+											"description"=>__("Enter the second service text",'foliogine'),
 											"id"=>"services_text2",
 											"default"=>""
 										),
 										array(
 									
 											"type"=>"image",
-											"name"=>"Image 3",
+											"name"=>__("Image 3",'foliogine'),
 											"description"=>"",
 											"id"=>"services_image3",
 											"default"=> "" 
 										),
 										array(
 											"type"=>"input_text",
-											"name"=>"Title 3",
-											"description"=>"Enter the third service title",
+											"name"=>__("Title 3",'foliogine'),
+											"description"=>__("Enter the third service title",'foliogine'),
 											"id"=>"services_title3",
 											"default"=>""
 										),
 										array(
 											"type"=>"input_text",
-											"name"=>"Text 3",
-											"description"=>"Enter the third service text",
+											"name"=>__("Text 3",'foliogine'),
+											"description"=>__("Enter the third service text",'foliogine'),
 											"id"=>"services_text3",
 											"default"=>""
 										),
 										array(
 									
 											"type"=>"image",
-											"name"=>"Image 4",
+											"name"=>__("Image 4",'foliogine'),
 											"description"=>"",
 											"id"=>"services_image4",
 											"default"=> "" 
 										),
 										array(
 											"type"=>"input_text",
-											"name"=>"Title 4",
-											"description"=>"Enter the fourth service title",
+											"name"=>__("Title 4",'foliogine'),
+											"description"=>__("Enter the fourth service title",'foliogine'),
 											"id"=>"services_title4",
 											"default"=>""
 										),
 										array(
 											"type"=>"input_text",
-											"name"=>"Text 4",
-											"description"=>"Enter the fourth service text",
+											"name"=>__("Text 4",'foliogine'),
+											"description"=>__("Enter the fourth service text",'foliogine'),
 											"id"=>"services_text4",
 											"default"=>""
 										)
@@ -415,124 +415,124 @@
 								/* our team */
 								array(
 									"type"=>"group",
-									"name"=>"Our team section options",
+									"name"=>__("Our team section options",'foliogine'),
 									"options"=>	array(
 										array(
 									
 											"type"=>"multiselect",
-											"name"=>"Select all the pages where you want this section to appear",
-											"description"=>"Hold down the control (ctrl) button to select multiple options",
+											"name"=>__("Select all the pages where you want this section to appear",'foliogine'),
+											"description"=>__("Hold down the control (ctrl) button to select multiple options",'foliogine'),
 											"id"=>"team_select",
 											"options"=> $all_pages,
 											"default"=> $default_pages
 										),
 										array(
 											"type"=>"select",
-											"name"=>"Archive page",
-											"description"=>"Show or hide our team section in the archive page.",
+											"name"=>__("Archive page",'foliogine'),
+											"description"=>__("Show or hide our team section in the archive page.",'foliogine'),
 											"id"=>"team_archive",
 											"options"=>array(
-												"hide"=>"Hide",
-												"show"=>"Show"
+												"hide"=>__("Hide",'foliogine'),
+												"show"=>__("Show",'foliogine')
 											),
 											"default"=>"hide"
 										),
 										array(
 											"type"=>"select",
-											"name"=>"Search page",
-											"description"=>"Show or hide our team section in the search page.",
+											"name"=>__("Search page",'foliogine'),
+											"description"=>__("Show or hide our team section in the search page.",'foliogine'),
 											"id"=>"team_search",
 											"options"=>array(
-												"hide"=>"Hide",
-												"show"=>"Show"
+												"hide"=>__("Hide",'foliogine'),
+												"show"=>__("Show",'foliogine')
 											),
 											"default"=>"hide"
 										),
 										array(
 									
 											"type"=>"image",
-											"name"=>"Person image 1",
+											"name"=>__("Person image 1",'foliogine'),
 											"description"=>"",
 											"id"=>"team_image1",
 											"default"=> "" 
 										),
 										array(
 											"type"=>"input_text",
-											"name"=>"Person Name 1",
-											"description"=>"Enter the first person's name to appear in the our team area",
+											"name"=>__("Person Name 1",'foliogine'),
+											"description"=>__("Enter the first person's name to appear in the our team area",'foliogine'),
 											"id"=>"team_name1",
 											"default"=>""
 										),
 										array(
 											"type"=>"input_text",
-											"name"=>"Person Job 1",
-											"description"=>"Enter the first person's job to appear in the our team area",
+											"name"=>__("Person Job 1",'foliogine'),
+											"description"=>__("Enter the first person's job to appear in the our team area",'foliogine'),
 											"id"=>"team_job1",
 											"default"=>""
 										),
 										array(
 									
 											"type"=>"image",
-											"name"=>"Person image 2",
+											"name"=>__("Person image 2",'foliogine'),
 											"description"=>"",
 											"id"=>"team_image2",
 											"default"=> "" 
 										),
 										array(
 											"type"=>"input_text",
-											"name"=>"Person Name 2",
-											"description"=>"Enter the second person's name to appear in the our team area",
+											"name"=>__("Person Name 2",'foliogine'),
+											"description"=>__("Enter the second person's name to appear in the our team area",'foliogine'),
 											"id"=>"team_name2",
 											"default"=>""
 										),
 										array(
 											"type"=>"input_text",
-											"name"=>"Person Job 2",
-											"description"=>"Enter the second person's job to appear in the our team area",
+											"name"=>__("Person Job 2",'foliogine'),
+											"description"=>__("Enter the second person's job to appear in the our team area",'foliogine'),
 											"id"=>"team_job2",
 											"default"=>""
 										),
 										array(
 									
 											"type"=>"image",
-											"name"=>"Person image 3",
+											"name"=>__("Person image 3",'foliogine'),
 											"description"=>"",
 											"id"=>"team_image3",
 											"default"=> "" 
 										),
 										array(
 											"type"=>"input_text",
-											"name"=>"Person Name 3",
-											"description"=>"Enter the third person's name to appear in the our team area",
+											"name"=>__("Person Name 3",'foliogine'),
+											"description"=>__("Enter the third person's name to appear in the our team area",'foliogine'),
 											"id"=>"team_name3",
 											"default"=>""
 										),
 										array(
 											"type"=>"input_text",
-											"name"=>"Person Job 3",
-											"description"=>"Enter the third person's job to appear in the our team area",
+											"name"=>__("Person Job 3",'foliogine'),
+											"description"=>__("Enter the third person's job to appear in the our team area",'foliogine'),
 											"id"=>"team_job3",
 											"default"=>""
 										),
 										array(
 									
 											"type"=>"image",
-											"name"=>"Person image 4",
+											"name"=>__("Person image 4",'foliogine'),
 											"description"=>"",
 											"id"=>"team_image4",
 											"default"=> "" 
 										),
 										array(
 											"type"=>"input_text",
-											"name"=>"Person Name 4",
-											"description"=>"Enter the fourth person's name to appear in the our team area",
+											"name"=>__("Person Name 4",'foliogine'),
+											"description"=>__("Enter the fourth person's name to appear in the our team area",'foliogine'),
 											"id"=>"team_name4",
 											"default"=>""
 										),
 										array(
 											"type"=>"input_text",
-											"name"=>"Person Job 4",
-											"description"=>"Enter the fourth person's job to appear in the our team area",
+											"name"=>__("Person Job 4",'foliogine'),
+											"description"=>__("Enter the fourth person's job to appear in the our team area",'foliogine'),
 											"id"=>"team_job4",
 											"default"=>""
 										)
@@ -543,64 +543,64 @@
 								/* testimonials */
 								array(
 									"type"=>"group",
-									"name"=>"Testimonials section options",
+									"name"=>__("Testimonials section options",'foliogine'),
 									"options"=>	array(
 										array(
 									
 											"type"=>"multiselect",
-											"name"=>"Select all the pages where you want this section to appear",
-											"description"=>"Hold down the control (ctrl) button to select multiple options",
+											"name"=>__("Select all the pages where you want this section to appear",'foliogine'),
+											"description"=>__("Hold down the control (ctrl) button to select multiple options",'foliogine'),
 											"id"=>"testimonial_select",
 											"options"=> $all_pages,
 											"default"=> $default_pages
 										),
 										array(
 											"type"=>"select",
-											"name"=>"Archive page",
-											"description"=>"Show or hide testimonials section in the archive page.",
+											"name"=>__("Archive page",'foliogine'),
+											"description"=>__("Show or hide testimonials section in the archive page.",'foliogine'),
 											"id"=>"testimonial_archive",
 											"options"=>array(
-												"hide"=>"Hide",
-												"show"=>"Show"
+												"hide"=>__("Hide",'foliogine'),
+												"show"=>__("Show",'foliogine')
 											),
 											"default"=>"hide"
 										),
 										array(
 											"type"=>"select",
-											"name"=>"Search page",
-											"description"=>"Show or hide testimonials section in the search page.",
+											"name"=>__("Search page",'foliogine'),
+											"description"=>__("Show or hide testimonials section in the search page.",'foliogine'),
 											"id"=>"testimonial_search",
 											"options"=>array(
-												"hide"=>"Hide",
-												"show"=>"Show"
+												"hide"=>__("Hide",'foliogine'),
+												"show"=>__("Show",'foliogine')
 											),
 											"default"=>"hide"
 										),
 										array(
 											"type"=>"input_text",
-											"name"=>"Title",
-											"description"=>"Enter the title to appear in the testimonials area",
+											"name"=>__("Title",'foliogine'),
+											"description"=>__("Enter the title to appear in the testimonials area",'foliogine'),
 											"id"=>"testimonial_title",
 											"default"=>""
 										),
 										array(
 											"type"=>"input_text",
-											"name"=>"Content",
-											"description"=>"Enter the text to appear in the testimonials area",
+											"name"=>__("Content",'foliogine'),
+											"description"=>__("Enter the text to appear in the testimonials area",'foliogine'),
 											"id"=>"testimonial_content",
 											"default"=>""
 										),
 										array(
 											"type"=>"input_text",
-											"name"=>"Author",
-											"description"=>"Enter the author to appear in the testimonials area",
+											"name"=>__("Author",'foliogine'),
+											"description"=>__("Enter the author to appear in the testimonials area",'foliogine'),
 											"id"=>"testimonial_author",
 											"default"=>""
 										),
 										array(
 											"type"=>"input_text",
-											"name"=>"Info about the author",
-											"description"=>"Enter a small piece of information to appear after the author name in the testimonials area",
+											"name"=>__("Info about the author",'foliogine'),
+											"description"=>__("Enter a small piece of information to appear after the author name in the testimonials area",'foliogine'),
 											"id"=>"testimonial_info",
 											"default"=>""
 										)
@@ -609,57 +609,57 @@
 								/* our skills */
 								array(
 									"type"=>"group",
-									"name"=>"Our skills section options",
+									"name"=>__("Our skills section options",'foliogine'),
 									"options"=>	array(
 										array(
 									
 											"type"=>"multiselect",
-											"name"=>"Select all the pages where you want this section to appear",
-											"description"=>"Hold down the control (ctrl) button to select multiple options",
+											"name"=>__("Select all the pages where you want this section to appear",'foliogine'),
+											"description"=>__("Hold down the control (ctrl) button to select multiple options",'foliogine'),
 											"id"=>"the_skill_select",
 											"options"=> $all_pages,
 											"default"=> $default_pages
 										),
 										array(
 											"type"=>"select",
-											"name"=>"Archive page",
-											"description"=>"Show or hide download brochure section in the archive page.",
+											"name"=>__("Archive page",'foliogine'),
+											"description"=>__("Show or hide download brochure section in the archive page.",'foliogine'),
 											"id"=>"skill_archive",
 											"options"=>array(
-												"hide"=>"Hide",
-												"show"=>"Show"
+												"hide"=>__("Hide",'foliogine'),
+												"show"=>__("Show",'foliogine')
 											),
 											"default"=>"hide"
 										),
 										array(
 											"type"=>"select",
-											"name"=>"Search page",
-											"description"=>"Show or hide download brochure section in the search page.",
+											"name"=>__("Search page",'foliogine'),
+											"description"=>__("Show or hide download brochure section in the search page.",'foliogine'),
 											"id"=>"skill_search",
 											"options"=>array(
-												"hide"=>"Hide",
-												"show"=>"Show"
+												"hide"=>__("Hide",'foliogine'),
+												"show"=>__("Show",'foliogine')
 											),
 											"default"=>"hide"
 										),
 										array(
 											"type"=>"input_text",
-											"name"=>"Title",
-											"description"=>"Enter the title to appear in the skills area",
+											"name"=>__("Title",'foliogine'),
+											"description"=>__("Enter the title to appear in the skills area",'foliogine'),
 											"id"=>"skill_title",
 											"default"=>""
 										),
 										array(
 											"type"=>"input_text",
-											"name"=>"First skill text",
-											"description"=>"Enter the text to appear in the first skill area",
+											"name"=>__("First skill text",'foliogine'),
+											"description"=>__("Enter the text to appear in the first skill area",'foliogine'),
 											"id"=>"skill_text1",
 											"default"=>""
 										),
 										array(
 											"type"=>"input_number",
-											"name"=>"First skill value",
-											"description"=>"Enter the value for the first skill area",
+											"name"=>__("First skill value",'foliogine'),
+											"description"=>__("Enter the value for the first skill area",'foliogine'),
 											"id"=>"skill_val1",
 											"max"=>100,
 											"min"=>1, 
@@ -668,15 +668,15 @@
 										),
 										array(
 											"type"=>"input_text",
-											"name"=>"Second skill text",
-											"description"=>"Enter the text to appear in the second skill area",
+											"name"=>__("Second skill text",'foliogine'),
+											"description"=>__("Enter the text to appear in the second skill area",'foliogine'),
 											"id"=>"skill_text2",
 											"default"=>""
 										),
 										array(
 											"type"=>"input_number",
-											"name"=>"Second skill value",
-											"description"=>"Enter the value for the second skill area",
+											"name"=>__("Second skill value",'foliogine'),
+											"description"=>__("Enter the value for the second skill area",'foliogine'),
 											"id"=>"skill_val2",
 											"max"=>100,
 											"min"=>1, 
@@ -685,15 +685,15 @@
 										),
 										array(
 											"type"=>"input_text",
-											"name"=>"Third skill text",
-											"description"=>"Enter the text to appear in the third skill area",
+											"name"=>__("Third skill text",'foliogine'),
+											"description"=>__("Enter the text to appear in the third skill area",'foliogine'),
 											"id"=>"skill_text3",
 											"default"=>""
 										),
 										array(
 											"type"=>"input_number",
-											"name"=>"Third skill value",
-											"description"=>"Enter the value for the third skill area",
+											"name"=>__("Third skill value",'foliogine'),
+											"description"=>__("Enter the value for the third skill area",'foliogine'),
 											"id"=>"skill_val3",
 											"max"=>100,
 											"min"=>1, 
@@ -702,15 +702,15 @@
 										),
 										array(
 											"type"=>"input_text",
-											"name"=>"Fourth skill text",
-											"description"=>"Enter the text to appear in the fourth skill area",
+											"name"=>__("Fourth skill text",'foliogine'),
+											"description"=>__("Enter the text to appear in the fourth skill area",'foliogine'),
 											"id"=>"skill_text4",
 											"default"=>""
 										),
 										array(
 											"type"=>"input_number",
-											"name"=>"Fourth skill value",
-											"description"=>"Enter the value for the fourth skill area",
+											"name"=>__("Fourth skill value",'foliogine'),
+											"description"=>__("Enter the value for the fourth skill area",'foliogine'),
 											"id"=>"skill_val4",
 											"max"=>100,
 											"min"=>1, 
@@ -723,73 +723,73 @@
 						),	
 						array(
 							 "type"=>"tab",
-							 "name"=>"Blog + Search + Archive options",
+							 "name"=>__("Blog + Search + Archive options",'foliogine'),
 							 "options"=>array(
 										array(
 											
 											"type"=>"radio",
-											"name"=>"Layout for blog page",
-											"description"=>"Choose the layout for the blog page, the archive page and the search page",
+											"name"=>__("Layout for blog page",'foliogine'),
+											"description"=>__("Choose the layout for the blog page, the archive page and the search page",'foliogine'),
 											"id"=>"layout_blog",
 											"options"=>array(
-												"valoare1"=>"Left sidebar",
-												"valoare2"=>"Right sidebar",
-												"valoare3"=>"Both left and right sidebars"
+												"valoare1"=>__("Left sidebar",'foliogine'),
+												"valoare2"=>__("Right sidebar",'foliogine'),
+												"valoare3"=>__("Both left and right sidebars",'foliogine')
 											),
 											"default"=>"valoare1"
 										),
 										array(
 											"type"=>"select",
-											"name"=>"Featured image",
-											"description"=>"Show or hide featured image in the blog page, the archive page and the search page",
+											"name"=>__("Featured image",'foliogine'),
+											"description"=>__("Show or hide featured image in the blog page, the archive page and the search page",'foliogine'),
 											"id"=>"featured_image",
 											"options"=>array(
-												"hide"=>"Hide",
-												"show"=>"Show"
+												"hide"=>__("Hide",'foliogine'),
+												"show"=>__("Show",'foliogine')
 											),
 											"default"=>"show"
 										),
 										array(
 											"type"=>"select",
-											"name"=>"Date",
-											"description"=>"Show or hide date in the blog page, the archive page and the search page",
+											"name"=>__("Date",'foliogine'),
+											"description"=>__("Show or hide date in the blog page, the archive page and the search page",'foliogine'),
 											"id"=>"date",
 											"options"=>array(
-												"hide"=>"Hide",
-												"show"=>"Show"
+												"hide"=>__("Hide",'foliogine'),
+												"show"=>__("Show",'foliogine')
 											),
 											"default"=>"show"
 										),
 										array(
 											"type"=>"select",
-											"name"=>"Category",
-											"description"=>"Show or hide category in the blog page, the archive page and the search page",
+											"name"=>__("Category",'foliogine'),
+											"description"=>__("Show or hide category in the blog page, the archive page and the search page",'foliogine'),
 											"id"=>"category",
 											"options"=>array(
-												"hide"=>"Hide",
-												"show"=>"Show"
+												"hide"=>__("Hide",'foliogine'),
+												"show"=>__("Show",'foliogine')
 											),
 											"default"=>"show"
 										),
 										array(
 											"type"=>"select",
-											"name"=>"Author",
-											"description"=>"Show or hide author in the blog page, the archive page and the search page",
+											"name"=>__("Author",'foliogine'),
+											"description"=>__("Show or hide author in the blog page, the archive page and the search page",'foliogine'),
 											"id"=>"author",
 											"options"=>array(
-												"hide"=>"Hide",
-												"show"=>"Show"
+												"hide"=>__("Hide",'foliogine'),
+												"show"=>__("Show",'foliogine')
 											),
 											"default"=>"show"
 										),
 										array(
 											"type"=>"select",
-											"name"=>"Tags",
-											"description"=>"Show or hide tags in the blog page, the archive page and the search page",
+											"name"=>__("Tags",'foliogine'),
+											"description"=>__("Show or hide tags in the blog page, the archive page and the search page",'foliogine'),
 											"id"=>"tags",
 											"options"=>array(
-												"hide"=>"Hide",
-												"show"=>"Show"
+												"hide"=>__("Hide",'foliogine'),
+												"show"=>__("Show",'foliogine')
 											),
 											"default"=>"show"
 										)
@@ -797,84 +797,84 @@
 						),	
 						array(
 							 "type"=>"tab",
-							 "name"=>"Single post options",
+							 "name"=>__("Single post options",'foliogine'),
 							 "options"=>array(
 										array(
 											
 											"type"=>"radio",
-											"name"=>"Layout for single post",
-											"description"=>"Choose the layout for the single post",
+											"name"=>__("Layout for single post",'foliogine'),
+											"description"=>__("Choose the layout for the single post",'foliogine'),
 											"id"=>"layout_single",
 											"options"=>array(
-												"valoare1"=>"Left sidebar",
-												"valoare2"=>"Right sidebar",
-												"valoare3"=>"Both left and right sidebars"
+												"valoare1"=>__("Left sidebar",'foliogine'),
+												"valoare2"=>__("Right sidebar",'foliogine'),
+												"valoare3"=>__("Both left and right sidebars",'foliogine')
 											),
 											"default"=>"valoare1"
 										),
 										array(
 											"type"=>"select",
-											"name"=>"Featured image",
-											"description"=>"Show or hide featured image in the single post",
+											"name"=>__("Featured image",'foliogine'),
+											"description"=>__("Show or hide featured image in the single post",'foliogine'),
 											"id"=>"featured_image_single",
 											"options"=>array(
-												"hide"=>"Hide",
-												"show"=>"Show"
+												"hide"=>__("Hide",'foliogine'),
+												"show"=>__("Show",'foliogine')
 											),
 											"default"=>"show"
 										),
 										array(
 											"type"=>"select",
-											"name"=>"Date",
-											"description"=>"Show or hide date in the single post",
+											"name"=>__("Date",'foliogine'),
+											"description"=>__("Show or hide date in the single post",'foliogine'),
 											"id"=>"date_single",
 											"options"=>array(
-												"hide"=>"Hide",
-												"show"=>"Show"
+												"hide"=>__("Hide",'foliogine'),
+												"show"=>__("Show",'foliogine')
 											),
 											"default"=>"show"
 										),
 										array(
 											"type"=>"select",
-											"name"=>"Category",
-											"description"=>"Show or hide category in the single post",
+											"name"=>__("Category",'foliogine'),
+											"description"=>__("Show or hide category in the single post",'foliogine'),
 											"id"=>"category_single",
 											"options"=>array(
-												"hide"=>"Hide",
-												"show"=>"Show"
+												"hide"=>__("Hide",'foliogine'),
+												"show"=>__("Show",'foliogine')
 											),
 											"default"=>"show"
 										),
 										array(
 											"type"=>"select",
-											"name"=>"Author",
-											"description"=>"Show or hide author in the single post",
+											"name"=>__("Author",'foliogine'),
+											"description"=>__("Show or hide author in the single post",'foliogine'),
 											"id"=>"author_single",
 											"options"=>array(
-												"hide"=>"Hide",
-												"show"=>"Show"
+												"hide"=>__("Hide",'foliogine'),
+												"show"=>__("Show",'foliogine')
 											),
 											"default"=>"show"
 										),
 										array(
 											"type"=>"select",
-											"name"=>"Tags",
-											"description"=>"Show or hide tags in the single post",
+											"name"=>__("Tags",'foliogine'),
+											"description"=>__("Show or hide tags in the single post",'foliogine'),
 											"id"=>"tags_single",
 											"options"=>array(
-												"hide"=>"Hide",
-												"show"=>"Show"
+												"hide"=>__("Hide",'foliogine'),
+												"show"=>__("Show",'foliogine')
 											),
 											"default"=>"show"
 										),
 										array(
 											"type"=>"select",
-											"name"=>"Comments",
-											"description"=>"Show or hide comments in the single post",
+											"name"=>__("Comments",'foliogine'),
+											"description"=>__("Show or hide comments in the single post",'foliogine'),
 											"id"=>"comments",
 											"options"=>array(
-												"hide"=>"Hide",
-												"show"=>"Show"
+												"hide"=>__("Hide",'foliogine'),
+												"show"=>__("Show",'foliogine')
 											),
 											"default"=>"show"
 										)
@@ -882,59 +882,59 @@
 						),
 						array(
 							 "type"=>"tab",
-							 "name"=>"Footer options",
+							 "name"=>__("Footer options",'foliogine'),
 							 "options"=>array(		
 										array(
 											"type"=>"select",
-											"name"=>"Footer columns",
-											"description"=>"How many columns should be displayed in your footer",
+											"name"=>__("Footer columns",'foliogine'),
+											"description"=>__("How many columns should be displayed in your footer",'foliogine'),
 											"id"=>"footer_columns",
 											"options"=>array(
-												"doi"=>"Two",
-												"trei"=>"Three"
+												"doi"=>__("Two",'foliogine'),
+												"trei"=>__("Three",'foliogine')
 											),
 											"default"=>"doi"
 										),
 										array(
 									
 											"type"=>"image",
-											"name"=>"Logo",
+											"name"=>__("Logo",'foliogine'),
 											"description"=>"",
 											"id"=>"logo_footer",
 											"default"=>"" 
 										),
 										array(
 											"type"=>"input_text",
-											"name"=>"Logo footer text",
+											"name"=>__("Logo footer text",'foliogine'),
 											"description"=>"",
 											"id"=>"logo_footer_text",
 											"default"=>""
 										),
 										array(
 											"type"=>"input_text",
-											"name"=>"Twitter Link",
-											"description"=>"Enter your twitter account link. If you leave this blank the twitter link in the footer wont be displayed",
+											"name"=>__("Twitter Link",'foliogine'),
+											"description"=>__("Enter your twitter account link. If you leave this blank the twitter link in the footer wont be displayed",'foliogine'),
 											"id"=>"twitter",
 											"default"=>""
 										),
 										array(
 											"type"=>"input_text",
-											"name"=>"RSS link",
-											"description"=>"Enter your RSS link. If you leave this blank the RSS link in the footer wont be displayed",
+											"name"=>__("RSS link",'foliogine'),
+											"description"=>__("Enter your RSS link. If you leave this blank the RSS link in the footer wont be displayed",'foliogine'),
 											"id"=>"rss",
 											"default"=>""
 										),
 										array(
 											"type"=>"input_text",
-											"name"=>"Linkedin Link",
-											"description"=>"Enter your Linkedin link. If you leave this blank the linkedin link in the footer wont be displayed",
+											"name"=>__("Linkedin Link",'foliogine'),
+											"description"=>__("Enter your Linkedin link. If you leave this blank the linkedin link in the footer wont be displayed",'foliogine'),
 											"id"=>"linkedin",
 											"default"=>""
 										),
 										array(
 											"type"=>"input_text",
-											"name"=>"Copyright",
-											"description"=>"Enter your copyright. If you leave this blank the copyright in the footer wont be displayed",
+											"name"=>__("Copyright",'foliogine'),
+											"description"=>__("Enter your copyright. If you leave this blank the copyright in the footer wont be displayed",'foliogine'),
 											"id"=>"copyright",
 											"default"=>""
 										),
@@ -942,47 +942,47 @@
 						),
 						array(
 							 "type"=>"tab",
-							 "name"=>"Contact options",
+							 "name"=>__("Contact options",'foliogine'),
 							 "options"=>array(	
 								array(
 									"type"=>"input_text",
-									"name"=>"Address for google map",
-									"description"=>"Enter your address for the google map to appear contact page.If you leave this blank the google map wont be displayed",
+									"name"=>__("Address for google map",'foliogine'),
+									"description"=>__("Enter your address for the google map to appear contact page.If you leave this blank the google map wont be displayed",'foliogine'),
 									"id"=>"address_map",
 									"default"=>""
 								),
 								array(
 									"type"=>"input_text",
-									"name"=>"Email address",
-									"description"=>"Enter your email address to appear in footer and contact page.If you leave this blank the email address and the contact form wont be displayed",
+									"name"=>__("Email address",'foliogine'),
+									"description"=>__("Enter your email address to appear in footer and contact page.If you leave this blank the email address and the contact form wont be displayed",'foliogine'),
 									"id"=>"email",
 									"default"=>"test@yahoo.com"
 								),
 								array(
 									"type"=>"input_text",
-									"name"=>"Phone number",
-									"description"=>"Enter your phone number to appear in footer and contact page.If you leave this blank the phone number wont be displayed",
+									"name"=>__("Phone number",'foliogine'),
+									"description"=>__("Enter your phone number to appear in footer and contact page.If you leave this blank the phone number wont be displayed",'foliogine'),
 									"id"=>"phone",
 									"default"=>""
 								),
 								array(
 									"type"=>"input_text",
-									"name"=>"Address",
-									"description"=>"Enter your address to appear in footer and contact page.If you leave this blank the address wont be displayed",
+									"name"=>__("Address",'foliogine'),
+									"description"=>__("Enter your address to appear in footer and contact page.If you leave this blank the address wont be displayed",'foliogine'),
 									"id"=>"address",
 									"default"=>""
 								),
 								array(
 									"type"=>"input_text",
-									"name"=>"Subtitle",
-									"description"=>"Enter a subtitle to appear in contact page.If you leave this blank,WE ARE HERE FOR YOU will be displayed",
+									"name"=>__("Subtitle",'foliogine'),
+									"description"=>__("Enter a subtitle to appear in contact page.If you leave this blank,WE ARE HERE FOR YOU will be displayed",'foliogine'),
 									"id"=>"contact_title",
 									"default"=>""
 								),
 								array(
 									"type"=>"input_text",
-									"name"=>"Contact form title",
-									"description"=>"Enter a title for the form to appear in contact page.",
+									"name"=>__("Contact form title",'foliogine'),
+									"description"=>__("Enter a title for the form to appear in contact page.",'foliogine'),
 									"id"=>"contact_form",
 									"default"=>""
 								)
@@ -990,93 +990,93 @@
 						),
 						array(
 							 "type"=>"tab",
-							 "name"=>"Portofolio options",
+							 "name"=>__("Portofolio options",'foliogine'),
 							 "options"=>array(
 										array(
 											"type"=>"select",
-											"name"=>"Portofolio categories",
-											"description"=>"Show or hide categories in the portofolio",
+											"name"=>__("Portofolio categories",'foliogine'),
+											"description"=>__("Show or hide categories in the portofolio",'foliogine'),
 											"id"=>"portofolio_categories",
 											"options"=>array(
-												"hide"=>"Hide",
-												"show"=>"Show"
+												"hide"=>__("Hide",'foliogine'),
+												"show"=>__("Show",'foliogine')
 											),
 											"default"=>"show"
 										),
 										array(
 											"type"=>"select",
-											"name"=>"Featured image in portofolio single page",
-											"description"=>"Show or hide featured image in the portofolio single page",
+											"name"=>__("Featured image in portofolio single page",'foliogine'),
+											"description"=>__("Show or hide featured image in the portofolio single page",'foliogine'),
 											"id"=>"featured_image_portofolio",
 											"options"=>array(
-												"hide"=>"Hide",
-												"show"=>"Show"
+												"hide"=>__("Hide",'foliogine'),
+												"show"=>__("Show",'foliogine')
 											),
 											"default"=>"show"
 										),
 										array(
 											"type"=>"select",
-											"name"=>"Related items in portofolio single page",
-											"description"=>"Show or hide related items in the portofolio single page",
+											"name"=>__("Related items in portofolio single page",'foliogine'),
+											"description"=>__("Show or hide related items in the portofolio single page",'foliogine'),
 											"id"=>"related_items_portofolio",
 											"options"=>array(
-												"hide"=>"Hide",
-												"show"=>"Show"
+												"hide"=>__("Hide",'foliogine'),
+												"show"=>__("Show",'foliogine')
 											),
 											"default"=>"show"
 										),
 										array(
 											"type"=>"select",
-											"name"=>"Category name in portofolio single page",
-											"description"=>"Show or hide category name in the portofolio single page",
+											"name"=>__("Category name in portofolio single page",'foliogine'),
+											"description"=>__("Show or hide category name in the portofolio single page",'foliogine'),
 											"id"=>"category_portofolio",
 											"options"=>array(
-												"hide"=>"Hide",
-												"show"=>"Show"
+												"hide"=>__("Hide",'foliogine'),
+												"show"=>__("Show",'foliogine')
 											),
 											"default"=>"show"
 										),
 										array(
 											"type"=>"select",
-											"name"=>"Client name in portofolio single page",
-											"description"=>"Show or hide client name in the portofolio single page",
+											"name"=>__("Client name in portofolio single page",'foliogine'),
+											"description"=>__("Show or hide client name in the portofolio single page",'foliogine'),
 											"id"=>"client_portofolio",
 											"options"=>array(
-												"hide"=>"Hide",
-												"show"=>"Show"
+												"hide"=>__("Hide",'foliogine'),
+												"show"=>__("Show",'foliogine')
 											),
 											"default"=>"show"
 										),
 										array(
 											"type"=>"select",
-											"name"=>"Purpose in portofolio single page",
-											"description"=>"Show or hide purpose in the portofolio single page",
+											"name"=>__("Purpose in portofolio single page",'foliogine'),
+											"description"=>__("Show or hide purpose in the portofolio single page",'foliogine'),
 											"id"=>"purpose_portofolio",
 											"options"=>array(
-												"hide"=>"Hide",
-												"show"=>"Show"
+												"hide"=>__("Hide",'foliogine'),
+												"show"=>__("Show",'foliogine')
 											),
 											"default"=>"show"
 										),
 										array(
 											"type"=>"select",
-											"name"=>"Author name in portofolio single page",
-											"description"=>"Show or hide author name in the portofolio single page",
+											"name"=>__("Author name in portofolio single page",'foliogine'),
+											"description"=>__("Show or hide author name in the portofolio single page",'foliogine'),
 											"id"=>"author_portofolio",
 											"options"=>array(
-												"hide"=>"Hide",
-												"show"=>"Show"
+												"hide"=>__("Hide",'foliogine'),
+												"show"=>__("Show",'foliogine')
 											),
 											"default"=>"show"
 										),
 										array(
 											"type"=>"select",
-											"name"=>"Tags in portofolio single page",
-											"description"=>"Show or hide tags in the portofolio single page",
+											"name"=>__("Tags in portofolio single page",'foliogine'),
+											"description"=>__("Show or hide tags in the portofolio single page",'foliogine'),
 											"id"=>"tags_portofolio",
 											"options"=>array(
-												"hide"=>"Hide",
-												"show"=>"Show"
+												"hide"=>__("Hide",'foliogine'),
+												"show"=>__("Show",'foliogine')
 											),
 											"default"=>"show"
 										)

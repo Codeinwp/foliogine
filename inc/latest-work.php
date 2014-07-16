@@ -16,7 +16,7 @@
 				<div class="container">
 					
 					<div class="content"> 
-						<h2><?php _e('LATEST WORK','cwp'); ?></h2>
+						<h2><?php _e('LATEST WORK','foliogine'); ?></h2>
 						
 						<?php $fi = wp_get_attachment_url( get_post_thumbnail_id($recent_posts[0]['ID']));?>
 						<div class="screen"><a class="img-on-screen" style="background-image:url(<?php echo $fi; ?>)"></a></div>
@@ -26,10 +26,8 @@
 							<?php echo $recent_posts[0]['post_title']; ?>
 							</p>
 
-							<p><?php echo substr($recent_posts[0]['post_content'],0,30); ?></p>
-
-							<!-- <a href="#" title="Buy here" class="yellow-btn">BUY HERE</a> -->
-							<a href="<?php echo get_permalink($recent_posts[0]['ID']); ?>" title="" class="browse"><?php _e('Browse all of our portfolio >','cwp'); ?> </a>
+							<p><?php echo substr($recent_posts[0]['post_content'],0,30); ?></p>
+							<a href="<?php echo get_permalink($recent_posts[0]['ID']); ?>" title="" class="browse"><?php _e('Browse all of our portfolio >','foliogine'); ?> </a>
 
 						</div><!-- .text-box -->
 					</div><!-- .content -->

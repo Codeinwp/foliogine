@@ -47,11 +47,11 @@
 					<p class="text">						
 						<?php							
 							if(isset($phone) && $phone != '')								
-								echo 'Phone:'.$phone.'</br>';						
+								echo __( 'Phone','foliogine' ).':'.$phone.'</br>';						
 						?>						
 						<?php							
 							if(isset($email) && $email != '')								
-								echo 'Email: <a href="mailto:'.$email.'">'.$email.'</a>';						
+								echo __('Email','foliogine' ).': <a href="mailto:'.$email.'">'.$email.'</a>';						
 						?>						
 					</p>					
 				</div>		
@@ -82,11 +82,11 @@
 					<p class="text">						
 					<?php							
 						if(isset($phone) && $phone != '')								
-							echo 'Phone:'.$phone.'</br>';						
+							echo __('Phone','foliogine').':'.$phone.'</br>';						
 					?>						
 					<?php							
 						if(isset($email) && $email != '')								
-							echo 'Email: <a href="mailto:'.$email.'">'.$email.'</a>';						
+							echo __('Email','foliogine').': <a href="mailto:'.$email.'">'.$email.'</a>';						
 					?>						
 					</p>					
 				</div>		
@@ -109,7 +109,7 @@
 			<?php		if(isset($copyright) && $copyright != ''):		
 							echo '<p>'.$copyright.'</p>';	
 						else: ?>		
-							<p><?php _e('Copyright','cwp'); ?> &copy; <?php the_date('Y'); ?><br><?php _e('All rights reserved.','cwp'); ?></p>
+							<p><?php _e('Copyright','foliogine'); ?> &copy; <?php echo date('Y'); ?><br><?php _e('All rights reserved.','foliogine'); ?></p>
 						<?php	endif;?>
 			
 	</div>	

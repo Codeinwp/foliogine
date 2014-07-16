@@ -301,40 +301,40 @@ add_action('media_buttons','cwp_add_sc_select',11);
 function cwp_add_sc_select(){
     echo '&nbsp;<select id="sc_select">';
             
-            echo "<option value=''>List of shortcodes</option>";
+            echo "<option value=''>".__('List of shortcodes','foliogine')."</option>";
     
             /* Columns */
-            echo "<option value='[row]here must be shortcodes for spans[/row]'>Row ( Container for Spans )</option>";            
-            echo "<option value='[span1]content here[/span1]'>1 Column</option>";
-            echo "<option value='[span2]content here[/span2]'>2 Columns</option>";            
-            echo "<option value='[span3]content here[/span3]'>3 Columns</option>";                        
-            echo "<option value='[span4]content here[/span4]'>4 Columns</option>";                        
-            echo "<option value='[span5]content here[/span5]'>5 Columns</option>";                        
-            echo "<option value='[span6]content here[/span6]'>6 Columns</option>";                        
-            echo "<option value='[span7]content here[/span7]'>7 Columns</option>";                        
-            echo "<option value='[span8]content here[/span8]'>8 Columns</option>";                        
-            echo "<option value='[span9]content here[/span9]'>9 Columns</option>";                        
-            echo "<option value='[span10]content here[/span10]'>10 Columns</option>";                        
-            echo "<option value='[span11]content here[/span11]'>11 Columns</option>";
-            echo "<option value='[span12]content here[/span12]'>12 Columns</option>";
+            echo "<option value='[row]".__( 'here must be shortcodes for spans','foliogine' )."[/row]'>".__( 'Row ( Container for Spans )','foliogine' )."</option>";            
+            echo "<option value='[span1]".__( 'content here','foliogine' )."[/span1]'>".__( '1 Column','foliogine' )."</option>";
+            echo "<option value='[span2]".__( 'content here','foliogine' )."[/span2]'>".__( '2 Columns','foliogine' )."</option>";            
+            echo "<option value='[span3]".__( 'content here','foliogine' )."[/span3]'>".__( '3 Columns','foliogine' )."</option>";                        
+            echo "<option value='[span4]".__( 'content here','foliogine' )."[/span4]'>".__( '4 Columns','foliogine' )."</option>";                        
+            echo "<option value='[span5]".__( 'content here','foliogine' )."[/span5]'>".__( '5 Columns','foliogine' )."</option>";                        
+            echo "<option value='[span6]".__( 'content here','foliogine' )."[/span6]'>".__( '6 Columns','foliogine' )."</option>";                        
+            echo "<option value='[span7]".__( 'content here','foliogine' )."[/span7]'>".__( '7 Columns','foliogine' )."</option>";                        
+            echo "<option value='[span8]".__( 'content here','foliogine' )."[/span8]'>".__( '8 Columns','foliogine' )."</option>";                        
+            echo "<option value='[span9]".__( 'content here','foliogine' )."[/span9]'>".__( '9 Columns','foliogine' )."</option>";                        
+            echo "<option value='[span10]".__( 'content here','foliogine' )."[/span10]'>".__( '10 Columns','foliogine' )."</option>";                        
+            echo "<option value='[span11]".__( 'content here','foliogine' )."[/span11]'>".__( '11 Columns','foliogine' )."</option>";
+            echo "<option value='[span12]".__( 'content here','foliogine' )."[/span12]'>".__( '12 Columns','foliogine' )."</option>";
     
             /* Text and image */
-            echo "<option value='[text_and_image title=\"\" image=\"\" alt=\"\" text=\"\"]'>Image and text</option>";
+            echo "<option value='[text_and_image title=\"\" image=\"\" alt=\"\" text=\"\"]'>".__( 'Image and text','foliogine' )."</option>";
         
             /* Line */
-            echo "<option value='[line][/line]'>Line</option>";	
+            echo "<option value='[line][/line]'>".__( 'Line','foliogine' )."</option>";	
     
             /* Alert */                        
-            echo "<option value='[alert style=\"1\"]content here[/alert]'>Alerts</option>";		   		   		   		   		   		   
+            echo "<option value='[alert style=\"1\"]".__( 'content here','foliogine' )."[/alert]'>".__( 'Alerts','foliogine' )."</option>";		   		   		   		   		   		   
  
             /* Progress Bars */                        
-            echo "<option value='[progress percent=\"30\" style=\"1\"]'>Progress Bars</option>";		   		   		   		   		   		   
+            echo "<option value='[progress percent=\"30\" style=\"1\"]'>".__( 'Progress Bars','foliogine' )."</option>";		   		   		   		   		   		   
  
             /* Buttons */                        
-            echo "<option value='[button style=\"1\" caption=\"Button\" link=\"button_url\"][/button]'>Buttons</option>";	
+            echo "<option value='[button style=\"1\" caption=\"Button\" link=\"button_url\"][/button]'>".__( 'Buttons','foliogine' )."</option>";	
     
             /* Tabs */
-            echo "<option value='[tabs][tabs_names][tab title=\"tab1\" active=\"Enter y or n for active tab or none\" id=\"tab1_id\"][/tab][tab title=\"tab2\" active=\"Enter y or n for active tab or none\" id=\"tab2_id\"][/tab]Enter as much tabs names you want in here[/tabs_names][tabs_contents][content id=\"tab1_id\"]content1[/content][content id=\"tab2_id\"]content2[/content]Enter content for every tab entered[/tabs_contents][/tabs]'>Tabs</option>";                                    
+            echo "<option value='[tabs][tabs_names][tab title=\"tab1\" active=\"Enter y or n for active tab or none\" id=\"tab1_id\"][/tab][tab title=\"tab2\" active=\"Enter y or n for active tab or none\" id=\"tab2_id\"][/tab]Enter as much tabs names you want in here[/tabs_names][tabs_contents][content id=\"tab1_id\"]content1[/content][content id=\"tab2_id\"]content2[/content]Enter content for every tab entered[/tabs_contents][/tabs]'>".__( 'Tabs','foliogine' )."</option>";                                    
  
      
 		              

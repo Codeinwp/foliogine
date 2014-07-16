@@ -15,22 +15,22 @@
 
 <?php	if(isset($_POST['submitted'])) :        
 			if(trim($_POST['formname']) === ''):               
-				$nameError = __('Please enter your first name.','cwp');               
+				$nameError = __('Please enter your first name.','foliogine');               
 				$hasError = true;        
 			else:               
 				$name = trim($_POST['formname']);        
 			endif;         
 			if(trim($_POST['formmail']) === ''):               
-				$mailError = __('Please enter your email address.','cwp');               
+				$mailError = __('Please enter your email address.','foliogine');               
 				$hasError = true;        
 			elseif (!preg_match("/^[[:alnum:]][a-z0-9_.-]*@[a-z0-9.-]+\.[a-z]{2,4}$/i", trim($_POST['formmail']))) :               
-				$mailError = __('You entered an invalid email address.','cwp');               
+				$mailError = __('You entered an invalid email address.','foliogine');               
 				$hasError = true;        
 			else:               
 				$mail = trim($_POST['formmail']);        
 			endif;         
 			if(trim($_POST['formmessage']) === ''):               
-				$messageError = __('Please enter a message.','cwp');               
+				$messageError = __('Please enter a message.','foliogine');               
 				$hasError = true;        
 			else:               
 				if(function_exists('stripslashes')) :                       
@@ -70,23 +70,23 @@
 							<?php 	if(isset($contact_title) && $contact_title != ''): ?>									
 										<h2><?php echo $contact_title; ?></h2>						
 							<?php 	else: ?>											
-										<h2><?php _e('We are here for you','cwp'); ?></h2>						
+										<h2><?php _e('We are here for you','foliogine'); ?></h2>						
 							<?php 	endif; 								
 									if((isset($phone) && $phone != '') || (isset($email) && $email != '') || (isset($address) && $address != '')): ?>									
 										<address>									
 										<?php										
 											if(isset($address) && $address != '') :											
-												echo '<p><span>Address:</span>'.$address.'</p>';										
+												echo '<p><span>'.__('Address','foliogine').':</span>'.$address.'</p>';										
 											endif;										
 											if((isset($phone) && $phone != '') || (isset($email) && $email != '')):									
 										?>											
 												<p>											
 													<?php												
 														if(isset($phone) && $phone != ''):													
-															echo '<span>'.__('Phone:','cwp').'</span>'.$phone;												
+															echo '<span>'.__('Phone:','foliogine').'</span>'.$phone;												
 														endif;													
 														if(isset($email) && $email != ''):													
-															echo '<span>'.__('Email:','cwp').' </span>';													
+															echo '<span>'.__('Email:','foliogine').' </span>';													
 															echo '<a href="mailto:'.$email.'">'.$email.'</a>';												
 														endif;												
 													?>											
@@ -107,27 +107,27 @@
 										endif;							
 									?>							
 									<?php if(isset($emailSent) && $emailSent == true) : ?>									
-											<p><?php _e('Thanks, your email was sent successfully.','cwp'); ?></p>                            
+											<p><?php _e('Thanks, your email was sent successfully.','foliogine'); ?></p>                            
 									<?php elseif(isset($_POST['submitted'])): ?>                                    
-											<p><?php _e('Sorry, an error occured.','cwp'); ?><p>                            
+											<p><?php _e('Sorry, an error occured.','foliogine'); ?><p>                            
 									<?php endif; ?>														
 									<form action="" id="contactForm" method="post">								
 										<label for="formname">									
-											<span><?php _e('First name*','cwp'); ?></span>									
+											<span><?php _e('First name*','foliogine'); ?></span>									
 											<input type="text" name="formname" id="formname" value="<?php if(isset($_POST['formname'])) echo $_POST['formname'];?>" />																 
 											<?php if(isset($nameError) && $nameError != '') { ?>																		 
 												<span class="error"><?php echo $nameError;?></span>																 
 											<?php } ?>								
 										</label>																 								
 										<label for="formmail">									
-											<span><?php _e('Email address*','cwp'); ?></span>									
+											<span><?php _e('Email address*','foliogine'); ?></span>									
 											<input type="email" name="formmail" id="formmail" value="<?php if(isset($_POST['formmail']))  echo $_POST['formmail'];?>" />																 
 											<?php if(isset($mailError) && $mailError != '') { ?>																		 
 												<span class="error"><?php echo $mailError;?></span>																 
 											<?php } ?>								
 										</label>	 								
 										<label for="formmessage">									
-											<span><?php _e('Message*','cwp'); ?></span>									
+											<span><?php _e('Message*','foliogine'); ?></span>									
 											<textarea name="formmessage" id="formmessage" rows="5">
 												<?php 
 													if(isset($_POST['formmessage'])) { 
@@ -143,7 +143,7 @@
 													<span class="error"><?php echo $messageError;?></span>																 
 											<?php } ?>								
 										</label>											
-										<input type="submit" value="<?php _e('Send message','cwp'); ?>" class="btn" name="submit" />																
+										<input type="submit" value="<?php _e('Send message','foliogine'); ?>" class="btn" name="submit" />																
 										<input type="hidden" name="submitted" id="submitted" value="true" />							
 									</form>	
 								</div><!-- .form-contact -->				

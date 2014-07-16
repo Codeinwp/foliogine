@@ -22,7 +22,7 @@
 <section class="title-page-area">
 	<div class="container">
 
-		<h1><?php _e('Blog','cwp'); ?></h1>
+		<h1><?php _e('Blog','foliogine'); ?></h1>
 
     </div><!-- .container -->
 </section><!-- .title-page-area -->
@@ -44,7 +44,7 @@
 					}	
 					if(isset($the_author) && $the_author == 'show') {
 						$author = get_the_author();
-						echo '<p class="hidden-tablet"><span>'.__('Posted by','cwp').'</span><a href="'.get_author_posts_url( get_the_author_meta( 'ID' )).'">'.$author.'</a></p>';
+						echo '<p class="hidden-tablet"><span>'.__('Posted by','foliogine').'</span><a href="'.get_author_posts_url( get_the_author_meta( 'ID' )).'">'.$author.'</a></p>';
 					}
 					if(isset($the_category) && $the_category == 'show') {
 						
@@ -53,12 +53,12 @@
 						if(!empty($cats)) 
 							$tmp = $cats[0]->cat_name;
                         if(isset($tmp) && $tmp != '') {
-                            echo '<p class="hidden-tablet"><span>'.__('Posted in','cwp').'</span>';    
+                            echo '<p class="hidden-tablet"><span>'.__('Posted in','foliogine').'</span>';    
 						    echo '<a href="'.get_category_link($category[0]->cat_ID).'">'.$tmp.'</a></p>';
                         }    
 					}
 					if(isset($tags) && $tags == 'show' && has_tag()) {
-						echo '<p class="hidden-tablet"><span>'.__('Tagged with','cwp').'</span>';
+						echo '<p class="hidden-tablet"><span>'.__('Tagged with','foliogine').'</span>';
 						the_tags('');
 						echo '</p>';		
 					}	
@@ -82,7 +82,7 @@
 						<?php
 							if(isset($the_author) && $the_author == 'show') {
 								$author = get_the_author();
-								echo '<p><span>'.__('Posted by ','cwp').'</span><a href="'.get_author_posts_url( get_the_author_meta( 'ID' )).'">'.$author.'</a></p>';
+								echo '<p><span>'.__('Posted by ','foliogine').'</span><a href="'.get_author_posts_url( get_the_author_meta( 'ID' )).'">'.$author.'</a></p>';
 							}
 							if(isset($the_category) && $the_category == 'show') {
 								
@@ -91,21 +91,21 @@
 								if(!empty($cats)) 
 									$tmp = $cats[0]->cat_name;
                                 if(isset($tmp) && $tmp != '') {
-                                    echo '<p><span>'.__('Posted in ','cwp').'</span>';    
+                                    echo '<p><span>'.__('Posted in ','foliogine').'</span>';    
 								    echo '<a href="'.get_category_link($category[0]->cat_ID).'">'.$tmp.'</a></p>';
                                 }    
 							}
 							if(isset($tags) && $tags == 'show' && has_tag()) {
-									echo '<p><span>'.__('Tagged with ','cwp').'</span>';
+									echo '<p><span>'.__('Tagged with ','foliogine').'</span>';
 									the_tags('');
 									echo '</p>';
 							}	
 						?>
 						</div><!-- .post-info-phone -->
 						<p class="bottom-line">
-							<a href="<?php echo get_permalink($post->ID);?>" title="<?php _e('Continue reading','cwp'); ?>" class="continue"><?php _e('Continue reading','cwp'); ?> ></a>
-							<a class="icons comm" title="<?php _e('Comments ','cwp'); ?>"><span></span><?php comments_number( '0', '1', '%' ); ?></a>
-							<a class="icons eye" title="<?php _e('Views ','cwp'); ?>"><span></span><?php echo cwp_getPostViews(get_the_ID()); ?></a>
+							<a href="<?php echo get_permalink($post->ID);?>" title="<?php _e('Continue reading','foliogine'); ?>" class="continue"><?php _e('Continue reading','foliogine'); ?> ></a>
+							<a class="icons comm" title="<?php _e('Comments ','foliogine'); ?>"><span></span><?php comments_number( '0', '1', '%' ); ?></a>
+							<a class="icons eye" title="<?php _e('Views ','foliogine'); ?>"><span></span><?php echo cwp_getPostViews(get_the_ID()); ?></a>
 						</p><!-- .bottom-line -->
 					</div><!-- .post-img -->
 				</div><!-- .list-post-content -->
@@ -118,8 +118,8 @@
 			<div class="pagination-wrap">
 				
 				<p class="right">
-					<?php previous_posts_link( __( 'Prev', 'cwp' ) ); ?>
-					<?php next_posts_link( __( 'Next', 'cwp' ) ); ?>
+					<?php previous_posts_link( __( 'Prev', 'foliogine' ) ); ?>
+					<?php next_posts_link( __( 'Next', 'foliogine' ) ); ?>
 				</p>
 				
 			</div><!-- /pagination-->

@@ -9,7 +9,7 @@ if ( is_active_sidebar('sidebar-1') ):
 else:
 ?>
 						<div class="widget">
-							<p class="title"><?php _e('Recent posts','cwp'); ?></p>
+							<p class="title"><?php _e('Recent posts','foliogine'); ?></p>
 							<?php
 								$args = array(
 									'numberposts' => 10,
@@ -28,7 +28,7 @@ else:
 						</div><!-- .widget -->
 						
 						<div class="widget">
-							<p class="title"><?php _e('Recent comments','cwp'); ?></p>
+							<p class="title"><?php _e('Recent comments','foliogine'); ?></p>
 							<?php
 								$args = array(
 									'status' => 'approve',
@@ -36,12 +36,12 @@ else:
 								);
 								$comments = get_comments($args);
 								foreach($comments as $comment) :
-									echo '<p><span>'.$comment->comment_author.' commented on </span><a href="'.get_permalink($comment->comment_post_ID).'" title="'.get_the_title($comment->comment_post_ID).'">'.get_the_title($comment->comment_post_ID).'</a></p>';
+									echo '<p><span>'.$comment->comment_author.__(' commented on','foliogine').' </span><a href="'.get_permalink($comment->comment_post_ID).'" title="'.get_the_title($comment->comment_post_ID).'">'.get_the_title($comment->comment_post_ID).'</a></p>';
 								endforeach;
 							?>	
 						</div><!-- .widget -->
 						<div class="widget archives">
-							<p class="title"><?php _e('Archive','cwp'); ?></p>
+							<p class="title"><?php _e('Archive','foliogine'); ?></p>
 							<?php
 								$args = array(
 									'limit'           => 10,

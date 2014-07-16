@@ -26,7 +26,7 @@ while ( have_posts() ) : the_post();
 		</div>
 	</div> <!-- .container -->
 </section><!-- .about -->
-<?php endwhile; 
+<?php endwhile; 
 $id = get_the_ID(); //the current id page
 get_template_part('sections');   
 get_footer(); ?>
