@@ -15,7 +15,7 @@
           address,
           function(point) {
             if (!point) {
-              alert(address + " not found");
+              console.log(address + " not found");
             } else {
               map.setCenter(point, 13);
               var marker = new GMarker(point);
