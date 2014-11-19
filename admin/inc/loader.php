@@ -252,6 +252,7 @@ function isJson($string) {
 
 function cwp_check_config(){
 	$errors = array();
+	cwpConfig::init();
 	$config = cwpConfig::$structure;
 
 	$tab_fields  = array("type","name","options");
@@ -409,13 +410,13 @@ function cwp($name = ''){
 	return null;
 }
 
+add_action("admin_init","cwp_add_options");
+add_action("init","cwp_check_options");
+add_action("admin_notices", "cwp_admin_notice");
+add_action("wp_ajax_cwp_load_defaults", "cwp_load_defaults_callback");
 
-
-		add_action("admin_init","cwp_add_options");
-		add_action("init","cwp_check_options");
-		add_action("admin_notices", "cwp_admin_notice");
-		add_action("wp_ajax_cwp_load_defaults", "cwp_load_defaults_callback");
-
-
-
-
+add_action( 'admin_enqueue_scripts', 'cwp_top_custom_wp_admin_script'); 
+function cwp_top_custom_wp_admin_script($hook){
+	 if($hook == "appearance_page_theme_options")
+		wp_enqueue_media();
+}
