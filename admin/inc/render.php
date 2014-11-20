@@ -14,7 +14,7 @@
 			$this->add_js("main_page_js",$js_path."admin.js");
 			$this->add_js("typsy",$js_path."tipsy.js");
 			$this->add_js("jquery" );
-			$this->add_js("media" );
+			
 			 
 			$this->options =  get_option(cwp_config("menu_slug"));
 			$this->add_js('wp-color-picker' );
@@ -172,10 +172,6 @@
 				 wp_enqueue_style($file);
 			}
 			foreach($this->js as $file){
-				if($file == "media"){
-					
-						wp_enqueue_media(); 
-				}
 				 wp_enqueue_script($file) ;
 			}
 			include(locate_template("admin/layout/".$name.".php")); 
