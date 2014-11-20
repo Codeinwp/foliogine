@@ -1,5 +1,13 @@
 
 
+### 1.0.3 - 20/11/2014
+
+ Changes: 
+
+
+ * Fixed wordress 4.0 theme option error
+
+
 ### 1.0.2 - 17/10/2014
 
  Changes: 
