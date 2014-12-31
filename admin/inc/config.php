@@ -337,11 +337,18 @@
 											"id"=>"services_title1",
 											"default"=>""
 										),
-										array(
+    									array(
 											"type"=>"input_text",
 											"name"=>__("Text 1",'foliogine'),
 											"description"=>__("Enter the first service text",'foliogine'),
 											"id"=>"services_text1",
+											"default"=>""
+										),
+                                        array(
+											"type"=>"input_text",
+											"name"=>__("Link 1",'foliogine'),
+											"description"=>__("Enter the first service link",'foliogine'),
+											"id"=>"services_link1",
 											"default"=>""
 										),
 										array(
@@ -366,6 +373,13 @@
 											"id"=>"services_text2",
 											"default"=>""
 										),
+                                        array(
+    										"type"=>"input_text",
+											"name"=>__("Link 2",'foliogine'),
+											"description"=>__("Enter the second service link",'foliogine'),
+											"id"=>"services_link2",
+											"default"=>""
+										),
 										array(
 									
 											"type"=>"image",
@@ -388,6 +402,13 @@
 											"id"=>"services_text3",
 											"default"=>""
 										),
+                                        array(
+    										"type"=>"input_text",
+											"name"=>__("Link 3",'foliogine'),
+											"description"=>__("Enter the third service link",'foliogine'),
+											"id"=>"services_link3",
+											"default"=>""
+										),
 										array(
 									
 											"type"=>"image",
@@ -408,6 +429,13 @@
 											"name"=>__("Text 4",'foliogine'),
 											"description"=>__("Enter the fourth service text",'foliogine'),
 											"id"=>"services_text4",
+											"default"=>""
+										),
+                                        array(
+    										"type"=>"input_text",
+											"name"=>__("Link 4",'foliogine'),
+											"description"=>__("Enter the fourth  service link",'foliogine'),
+											"id"=>"services_link4",
 											"default"=>""
 										)
 									)
