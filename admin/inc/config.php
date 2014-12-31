@@ -343,7 +343,7 @@
 											"id"=>"services_text1",
 											"default"=>""
 										),
-                    array(
+										array(
 											"type"=>"input_text",
 											"name"=>__("Link 1",'foliogine'),
 											"description"=>__("Enter the first service link",'foliogine'),
@@ -371,7 +371,7 @@
 											"id"=>"services_text2",
 											"default"=>""
 										),
-                    array(
+										array(
 											"type"=>"input_text",
 											"name"=>__("Link 2",'foliogine'),
 											"description"=>__("Enter the second service link",'foliogine'),
@@ -399,7 +399,7 @@
 											"id"=>"services_text3",
 											"default"=>""
 										),
-                     array(
+										array(
 											"type"=>"input_text",
 											"name"=>__("Link 3",'foliogine'),
 											"description"=>__("Enter the third service link",'foliogine'),
@@ -427,7 +427,7 @@
 											"id"=>"services_text4",
 											"default"=>""
 										),
-                    array(
+										array(
 											"type"=>"input_text",
 											"name"=>__("Link 4",'foliogine'),
 											"description"=>__("Enter the fourth  service link",'foliogine'),
