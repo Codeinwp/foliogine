@@ -323,7 +323,6 @@
 											"default"=>"hide"
 										),
 										array(
-									
 											"type"=>"image",
 											"name"=>__("Image 1",'foliogine'),
 											"description"=>"",
@@ -337,14 +336,14 @@
 											"id"=>"services_title1",
 											"default"=>""
 										),
-    									array(
+										array(
 											"type"=>"input_text",
 											"name"=>__("Text 1",'foliogine'),
 											"description"=>__("Enter the first service text",'foliogine'),
 											"id"=>"services_text1",
 											"default"=>""
 										),
-                                        array(
+                    array(
 											"type"=>"input_text",
 											"name"=>__("Link 1",'foliogine'),
 											"description"=>__("Enter the first service link",'foliogine'),
@@ -352,7 +351,6 @@
 											"default"=>""
 										),
 										array(
-									
 											"type"=>"image",
 											"name"=>__("Image 2",'foliogine'),
 											"description"=>"",
@@ -373,15 +371,14 @@
 											"id"=>"services_text2",
 											"default"=>""
 										),
-                                        array(
-    										"type"=>"input_text",
+                    array(
+											"type"=>"input_text",
 											"name"=>__("Link 2",'foliogine'),
 											"description"=>__("Enter the second service link",'foliogine'),
 											"id"=>"services_link2",
 											"default"=>""
 										),
 										array(
-									
 											"type"=>"image",
 											"name"=>__("Image 3",'foliogine'),
 											"description"=>"",
@@ -402,15 +399,14 @@
 											"id"=>"services_text3",
 											"default"=>""
 										),
-                                        array(
-    										"type"=>"input_text",
+                     array(
+											"type"=>"input_text",
 											"name"=>__("Link 3",'foliogine'),
 											"description"=>__("Enter the third service link",'foliogine'),
 											"id"=>"services_link3",
 											"default"=>""
 										),
 										array(
-									
 											"type"=>"image",
 											"name"=>__("Image 4",'foliogine'),
 											"description"=>"",
@@ -431,8 +427,8 @@
 											"id"=>"services_text4",
 											"default"=>""
 										),
-                                        array(
-    										"type"=>"input_text",
+                    array(
+											"type"=>"input_text",
 											"name"=>__("Link 4",'foliogine'),
 											"description"=>__("Enter the fourth  service link",'foliogine'),
 											"id"=>"services_link4",
@@ -477,7 +473,6 @@
 											"default"=>"hide"
 										),
 										array(
-									
 											"type"=>"image",
 											"name"=>__("Person image 1",'foliogine'),
 											"description"=>"",
@@ -498,7 +493,7 @@
 											"id"=>"team_job1",
 											"default"=>""
 										),
-    									array(
+										array(
 											"type"=>"input_text",
 											"name"=>__("Person Link 1",'foliogine'),
 											"description"=>__("Enter the first person's link",'foliogine'),
@@ -506,7 +501,6 @@
 											"default"=>""
 										),
 										array(
-									
 											"type"=>"image",
 											"name"=>__("Person image 2",'foliogine'),
 											"description"=>"",
@@ -527,7 +521,7 @@
 											"id"=>"team_job2",
 											"default"=>""
 										),
-        								array(
+										array(
 											"type"=>"input_text",
 											"name"=>__("Person Link 2",'foliogine'),
 											"description"=>__("Enter the second person's link",'foliogine'),
@@ -535,7 +529,6 @@
 											"default"=>""
 										),
 										array(
-									
 											"type"=>"image",
 											"name"=>__("Person image 3",'foliogine'),
 											"description"=>"",
@@ -556,7 +549,7 @@
 											"id"=>"team_job3",
 											"default"=>""
 										),
-        								array(
+										array(
 											"type"=>"input_text",
 											"name"=>__("Person Link 3",'foliogine'),
 											"description"=>__("Enter the third person's link",'foliogine'),
@@ -564,7 +557,6 @@
 											"default"=>""
 										),
 										array(
-									
 											"type"=>"image",
 											"name"=>__("Person image 4",'foliogine'),
 											"description"=>"",
@@ -585,7 +577,7 @@
 											"id"=>"team_job4",
 											"default"=>""
 										),
-        								array(
+										array(
 											"type"=>"input_text",
 											"name"=>__("Person Link 4",'foliogine'),
 											"description"=>__("Enter the fourth person's link",'foliogine'),
