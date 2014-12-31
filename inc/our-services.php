@@ -26,11 +26,9 @@
 				<div class="content">
 					<h2><?php _e('OUR SERVICES','foliogine'); ?></h2>
 					
-    				<?php if(isset($services_link1) && $services_link1 != ''): ?>
-						<a href="<?php echo $services_link1; ?>" class="box-service">
-					<?php else: ?>	
-						<div class="box-service">
-					<?php endif; ?>	
+    				
+					<a <?php if(isset($services_link1) && $services_link1 != ''): ?> href="<?php echo $services_link1; ?>" <?php endif; ?> class="box-service">
+					
 						<?php if(isset($services_image1) && $services_image1 != '') : ?>
 							<div class="icon" style="background-image:url(<?php echo $services_image1; ?>)"></div>
 						<?php else: ?>	
@@ -48,16 +46,8 @@
 								endif;
 							?>
 						</div>
-    				<?php if(isset($services_link1) && $services_link1 != ''): ?>
-						</a> <!-- .box-service -->
-					<?php else: ?>	
-						</div> <!-- .box-service -->
-					<?php endif; ?>	
-    				<?php if(isset($services_link2) && $services_link2 != ''): ?>
-						<a href="<?php echo $services_link2; ?>" class="box-service">
-					<?php else: ?>	
-						<div class="box-service">
-					<?php endif; ?>
+    				</a> <!-- .box-service -->
+					<a <?php if(isset($services_link2) && $services_link2 != ''): ?> href="<?php echo $services_link2; ?>" <?php endif; ?> class="box-service">
 						<?php if(isset($services_image2) && $services_image2 != '') : ?>
 							<div class="icon" style="background-image:url(<?php echo $services_image2; ?>)"></div>
 						<?php else: ?>	
@@ -75,16 +65,8 @@
 								endif;
 							?>
 						</div>
-    				<?php if(isset($services_link2) && $services_link2 != ''): ?>
-						</a> <!-- .box-service -->
-					<?php else: ?>	
-						</div> <!-- .box-service -->
-					<?php endif; ?>	
-    				<?php if(isset($services_link3) && $services_link3 != ''): ?>
-						<a href="<?php echo $services_link3; ?>" class="box-service">
-					<?php else: ?>	
-						<div class="box-service">
-					<?php endif; ?>	
+    				</a> <!-- .box-service -->
+					<a <?php if(isset($services_link3) && $services_link3 != ''): ?> href="<?php echo $services_link3; ?>" <?php endif; ?> class="box-service">
 						<?php if(isset($services_image3) && $services_image3 != '') : ?>
 							<div class="icon" style="background-image:url(<?php echo $services_image3; ?>)"></div>
 						<?php else: ?>	
@@ -102,16 +84,8 @@
 								endif;
 							?>
 						</div>
-    				<?php if(isset($services_link3) && $services_link3 != ''): ?>
-						</a> <!-- .box-service -->
-					<?php else: ?>	
-						</div> <!-- .box-service -->
-					<?php endif; ?>	
-    				<?php if(isset($services_link4) && $services_link4 != ''): ?>
-						<a href="<?php echo $services_link4; ?>" class="box-service">
-					<?php else: ?>	
-						<div class="box-service">
-					<?php endif; ?>	
+    				</a> <!-- .box-service -->
+					<a <?php if(isset($services_link4) && $services_link4 != ''): ?> href="<?php echo $services_link4; ?>" <?php endif; ?> class="box-service">
 						<?php if(isset($services_image4) && $services_image4 != '') : ?>
 							<div class="icon" style="background-image:url(<?php echo $services_image4; ?>)"></div>
 						<?php else: ?>	
@@ -129,11 +103,7 @@
 								endif;
 							?>
 						</div>
-    				<?php if(isset($services_link4) && $services_link4 != ''): ?>
-						</a> <!-- .box-service -->
-					<?php else: ?>	
-						</div> <!-- .box-service -->
-					<?php endif; ?>	
+    				</a> <!-- .box-service -->
 
 				</div><!-- .content -->
 
