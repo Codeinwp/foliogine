@@ -1,5 +1,13 @@
 
 
+### 1.0.6 - 05/01/2015
+
+ Changes: 
+
+
+ * Fixed child theme support bug
+
+
 ### 1.0.5 - 05/01/2015
 
  Changes: 
