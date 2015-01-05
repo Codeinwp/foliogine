@@ -1,5 +1,13 @@
 
 
+### 1.0.5 - 05/01/2015
+
+ Changes: 
+
+
+ * Added support for child themes
+
+
 ### 1.0.4 - 02/01/2015
 
  Changes: 
