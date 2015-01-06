@@ -1630,6 +1630,12 @@ footer a, footer a:hover{
 .footer-box-right p.social a.tw:hover{
 	background-position: -72px bottom;
 	}
+.footer-box-right p.social a.fb{
+	background-position: -108px top;
+	}
+.footer-box-right p.social a.fb:hover{
+	background-position: -108px bottom;
+	}
 
 /***
  General elements page

@@ -981,6 +981,13 @@
 										),
 										array(
 											"type"=>"input_text",
+											"name"=>__("Facebook Link",'foliogine'),
+											"description"=>__("Enter your Facebook link. If you leave this blank the facebook link in the footer wont be displayed",'foliogine'),
+											"id"=>"facebook",
+											"default"=>""
+										),
+										array(
+											"type"=>"input_text",
 											"name"=>__("Copyright",'foliogine'),
 											"description"=>__("Enter your copyright. If you leave this blank the copyright in the footer wont be displayed",'foliogine'),
 											"id"=>"copyright",
