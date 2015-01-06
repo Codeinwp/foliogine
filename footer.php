@@ -15,6 +15,7 @@
 	$linkedin = cwp('linkedin');
 	$rss = cwp('rss');
 	$twitter = cwp('twitter');
+	$facebook = cwp('facebook');
 	$copyright = cwp('copyright');
 	
 	$address = cwp('address');
@@ -95,14 +96,16 @@
 		}		
 	?>						
 	<div class="footer-box-right">
-		<?php	if( (isset($linkedin) && $linkedin != '') || (isset($rss) && $rss != '') || (isset($twitter) && $twitter != '')) { ?>		
+		<?php	if( (isset($linkedin) && $linkedin != '') || (isset($rss) && $rss != '') || (isset($twitter) && $twitter != '') || (isset($facebook) && $facebook != '')) { ?>		
 			<p class="social">
 			<?php 	if(isset($linkedin) && $linkedin != '')		
-						echo "<a href='".$linkedin."' class='lin'></a>";	
+						echo "<a target="_blank" href='".$linkedin."' class='lin'></a>";	
 					if(isset($rss) && $rss != '')		
-						echo "<a href='".$rss."' class='rss'></a>";	
+						echo "<a target="_blank" href='".$rss."' class='rss'></a>";	
 					if(isset($twitter) && $twitter != '')		
-						echo "<a href='".$twitter."' class='tw'></a>";		
+						echo "<a target="_blank" href='".$twitter."' class='tw'></a>";		
+					if(isset($facebook) && $facebook != '')		
+						echo "<a target="_blank" href='".$facebook."' class='fb'></a>";		
 			?>
 			</p>
 			<?php  }?>
