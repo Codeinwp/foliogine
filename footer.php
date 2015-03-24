@@ -99,13 +99,13 @@
 		<?php	if( (isset($linkedin) && $linkedin != '') || (isset($rss) && $rss != '') || (isset($twitter) && $twitter != '') || (isset($facebook) && $facebook != '')) { ?>		
 			<p class="social">
 			<?php 	if(isset($linkedin) && $linkedin != '')		
-						echo "<a target="_blank" href='".$linkedin."' class='lin'></a>";	
+						echo "<a target='_blank' href='".$linkedin."' class='lin'></a>";	
 					if(isset($rss) && $rss != '')		
-						echo "<a target="_blank" href='".$rss."' class='rss'></a>";	
+						echo "<a target='_blank' href='".$rss."' class='rss'></a>";	
 					if(isset($twitter) && $twitter != '')		
-						echo "<a target="_blank" href='".$twitter."' class='tw'></a>";		
+						echo "<a target='_blank' href='".$twitter."' class='tw'></a>";		
 					if(isset($facebook) && $facebook != '')		
-						echo "<a target="_blank" href='".$facebook."' class='fb'></a>";		
+						echo "<a target='_blank' href='".$facebook."' class='fb'></a>";		
 			?>
 			</p>
 			<?php  }?>
