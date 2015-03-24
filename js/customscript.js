@@ -1,5 +1,4 @@
-jQuery(document).ready(function () { 
-    
+jQuery(document).ready(function () {
    
     jQuery('ul.sub-menu').parent().addClass('dropdown');
     jQuery('li.dropdown').children('a').addClass('dropdown-toggle');

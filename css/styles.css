@@ -6,7 +6,7 @@
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
 
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+@import url(//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
 /* font-family: 'Open Sans', sans-serif; font-weight: 400; */
 
 
@@ -67,7 +67,6 @@ section.latest-work .screen a.img-on-screen{
  Home page
 ---------------------------------*/	
 section.slider{ 
-	margin-top: 33px;
 	height: 450px;
 	background-position: center;
 	background-size: auto 100%;
@@ -1833,6 +1832,9 @@ div.line-yellow{
 }
 /**-**/
 
+.navbar a:hover {
+	color: #000 !important;
+}
 
 /***
  Media
@@ -2061,6 +2063,32 @@ div.line-yellow{
 	section.contact .left iframe{
 		height: 450px !important;
 		}
+	.navbar ul li,.navbar ul.sub-menu li {
+		width:100%;
+		text-align:center;
+	}
+	.main-navigation {
+		width:100%;
+	}
+	.navbar .nav {
+		width:100%;
+	}
+	.navbar ul.sub-menu {
+		width:100%;
+		display:block;
+		position:static;
+		top:auto !important;
+		float:none;
+	}
+	.navbar ul.sub-menu li a{
+		color:#fff;
+	}
+	.navbar ul.sub-menu li a {
+		width: 95%;
+	}
+	.arrow-small{
+		display:none;
+	}
 		
 }
 
@@ -2272,9 +2300,6 @@ div.line-yellow{
 	float: right;
 	position:relative;
 	left:0;
-   /* max-height:60px;
-    overflow:hidden;
-    max-width:760px;*/
 }
 .main-navigation ul {
 	list-style: none;

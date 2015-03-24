@@ -125,7 +125,7 @@ endif;
 	color: <?php echo $colorid; ?> !important;
 }
 .main-navigation ul ul, .main-navigation a:hover, .ribbon .text-yellow, .featured-work .yellow, .box-service .icon, .testimonial-box, .box-service:hover, .box-office, .yellow-btn, .breadcrumb a.active, .breadcrumb a:hover, section.work .item-box .hover, .load-more p.circle, section.download, .featured-img-top .text, section.item-details .content .left blockquote, section.related-items .pagination a.current, section.related-items .pagination a:hover, .navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus, .navbar .nav li.dropdown.open > .dropdown-toggle, .navbar .nav li.dropdown.active > .dropdown-toggle, .navbar .nav li.dropdown.open.active > .dropdown-toggle, .dropdown-menu, .pagination-wrap a.current, .pagination-wrap a:hover, .price_block:hover .price, .price_block:hover .action_button, .special-content, .nav-tabs > li > a, .nav-tabs > li > a:hover, .nav-tabs > li > a:focus, .table-hover tbody tr:hover > td, .table-hover tbody tr:hover > th, div.line-yellow, address p a, address p a:hover, .bottom-line a.icons span, .search input[type="submit"], .widget a.eye-icon span, .widget a.heart-icon span {
-	background-color:<?php echo $colorid; ?>;
+	background-color:<?php echo $colorid; ?> !important;
 }
 footer, section.latest-work, .image-wrap, .ribbon, .team-wrap{
 	border-color: <?php echo $colorid; ?>;

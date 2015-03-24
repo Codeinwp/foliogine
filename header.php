@@ -44,9 +44,6 @@
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
-          <a class="btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <?php _e('Homepage','cwp'); ?> <b class="arrow-menu"></b>
-          </a>
           <a class="brand" href="<?php echo get_site_url(); ?>" title="<?php bloginfo('name'); ?>">
 			<?php
 		  
@@ -65,11 +62,21 @@
 			?>
           </a>
 
-            <nav id="site-navigation" class="main-navigation" role="navigation">
-                <?php wp_nav_menu( array( 'theme_location' => 'top_menu' ) ); ?>
-            </nav><!-- #site-navigation -->
-          
-          
+			<nav class="navbar navbar-inverse">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span> 
+						</button>
+					</div>
+					<div class="collapse navbar-collapse" id="myNavbar">
+						<?php wp_nav_menu( array( 'theme_location' => 'top_menu','container_class' => 'main-navigation', 'menu_class' => 'nav navbar-nav' ) ); ?>
+					</div>
+				</div>
+			</nav>
+
         </div><!-- /.container -->
       </div><!-- /.navbar-inner -->
     </div><!-- /.navbar -->
