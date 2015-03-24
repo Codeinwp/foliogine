@@ -1,5 +1,14 @@
 
 
+### 1.0.8 - 24/03/2015
+
+ Changes: 
+
+
+ * Fixed #23, syntax error in footer
+ * Fixed #7, responsive top menu
+
+
 ### 1.0.6 - 05/01/2015
 
  Changes: 
