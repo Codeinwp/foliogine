@@ -1,5 +1,14 @@
 
 
+### 1.0.10 - 15/04/2015
+
+ Changes: 
+
+
+ * Fixed Warning: array_diff(): Argument #1 is not an array in /public_html/wp-content/themes/foliogine/admin/inc/adminSanitizer.php on line 111
+ * Update style.css
+
+
 ### 1.0.9 - 10/04/2015
 
  Changes: 
