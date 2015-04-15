@@ -108,7 +108,9 @@
 						 	$output[$key] = sanitize_text_field ($value) ; 
 					}
 					$kop = array_keys($options);
-					$dif = array_diff($output,$kop); 
+					if( is_array($output) ) {
+						$dif = array_diff($output,$kop);
+					}	
 					 
 					if(empty($dif))
 						return $output;
