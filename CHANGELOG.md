@@ -1,5 +1,13 @@
 
 
+### 1.1.1 - 23/04/2015
+
+ Changes: 
+
+
+ * Show page content on frontpage
+
+
 ### 1.1 - 20/04/2015
 
  Changes: 
