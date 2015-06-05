@@ -1,5 +1,13 @@
 
 
+### 1.1.3 - 05/06/2015
+
+ Changes: 
+
+
+ * Fixed dead links in related porfolio items
+
+
 ### 1.1.2 - 05/06/2015
 
  Changes: 
