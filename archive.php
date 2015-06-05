@@ -120,11 +120,11 @@
 						<?php
 							if(isset($the_author) && $the_author == 'show') {
 								$author = get_the_author();
-								echo '<p><span>'.__('Posted by','foliogine').'</span><a href="'.get_author_posts_url( get_the_author_meta( 'ID' )).'">'.$author.'</a></p>';
+								echo '<p><span>'.__('Posted by : ','foliogine').'</span><a href="'.get_author_posts_url( get_the_author_meta( 'ID' )).'">'.$author.'</a></p>';
 							}
 							if(isset($the_category) && $the_category == 'show') {
 								$author = get_the_author();
-								echo '<p><span>'.__('Posted in','foliogine').'</span>';
+								echo '<p><span>'.__('Posted in : ','foliogine').'</span>';
 								$category = get_the_category();
 								$cats = get_the_category($post->ID); 
 								if(!empty($cats)) 
@@ -132,7 +132,7 @@
 								echo '<a href="'.get_category_link($category[0]->cat_ID).'">'.$tmp.'</a></p>';
 							}
 							if(isset($tags) && $tags == 'show' && has_tag()) {
-									echo '<p><span>'.__('Tagged width','foliogine').'</span>';
+									echo '<p><span>'.__('Tagged with : ','foliogine').'</span>';
 									the_tags('');
 									echo '</p>';
 							}	
