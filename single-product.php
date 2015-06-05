@@ -207,74 +207,76 @@
 						$cats[] = $item->term_id;
 					}
 				}
-				$args = array( 'post__not_in' => $done , 'post_type' => 'product', 'posts_per_page' => $needed,'tax_query' => array(
-							array(
-								'taxonomy' => 'categories',
-								'field' => 'id',
-								'terms' => $cats
-							)
-						));
-				$query = new WP_Query( $args );
+				if( !empty($cats) ):
+					$args = array( 'post__not_in' => $done , 'post_type' => 'product', 'posts_per_page' => $needed,'tax_query' => array(
+								array(
+									'taxonomy' => 'categories',
+									'field' => 'id',
+									'terms' => $cats
+								)
+							));
+					$query = new WP_Query( $args );
 
-				if ( $query->have_posts() ):		
-					while ( $query->have_posts() ):
-						$query->the_post();
-						$id = get_the_ID();
-						$items = get_the_terms($id, 'categories');
-						if(!empty($items)) {
-							foreach ( $items as $item ) {
-								$cat = $item->name;
-								$slug = $item->slug;
-								$cat_id = $item->term_id;
+					if ( $query->have_posts() ):		
+						while ( $query->have_posts() ):
+							$query->the_post();
+							$id = get_the_ID();
+							$items = get_the_terms($id, 'categories');
+							if(!empty($items)) {
+								foreach ( $items as $item ) {
+									$cat = $item->name;
+									$slug = $item->slug;
+									$cat_id = $item->term_id;
+								}
 							}
-						}
-						?>
-						<div class="item-box top pag1">
-							<a href="#">
-								<div class="row-info">
-									<p class="category"><?php if(isset($cat) && $cat != ''): echo $cat; else: ''; endif; ?></p>
-									<p class="title"><?php the_title(); ?></p>
-									<time datetime="<?php $d = get_the_date('Y-m-d'); echo $d; ?>"><?php $data = get_the_date('d F'); echo $data; ?></time>				
-								</div><!-- .row-info -->
-								<b class="arrow-bottom"></b><b class="arrow-top"></b>
-								<div class="row-img">
-									<?php
-										if ( has_post_thumbnail($id) ) {
-											echo get_the_post_thumbnail($id,'portofolio-thumb'); 
-										}
-									?>
-								</div>
-								<div class="hover">
-									<p class="category"><?php if(isset($cat) && $cat != ''): echo $cat; else: ''; endif; ?></p>
-									<p class="title"><?php the_title(); ?></p>
-									<p class="text">
-										<?php echo substr(get_the_content(),0,100)."[...]"; ?>
-									</p>
-								</div><!-- .hover -->
-							</a>
-							
-							<?php
-								$hover_link1 = get_post_meta($id, 'hover_link1');
-								$hover_link2 = get_post_meta($id, 'hover_link2');
-								
-								if(isset($hover_link1[0]) && $hover_link1[0] != ''):
-									echo '<a href="'.$hover_link1[0].'" class="link-icon icon-search" title="'.__('Search','foliogine').'"></a>';
-								else:	
-									echo '<a href="#" class="link-icon icon-search" title="'.__('Search','foliogine').'"></a>';
-								endif;
-								
-								if(isset($hover_link2[0]) && $hover_link2[0] != ''):
-									echo '<a href="'.$hover_link2[0].'" class="link-icon icon-link" title="'.__('Search','foliogine').'"></a>';
-								else:	
-									echo '<a href="#" class="link-icon icon-link" title="'.__('Link','foliogine').'"></a>';
-								endif;
 							?>
-						</div><!-- .item-box -->
-						<?php
-					endwhile;
+							<div class="item-box top pag1">
+								<a href="<?php the_permalink(); ?>">
+									<div class="row-info">
+										<p class="category"><?php if(isset($cat) && $cat != ''): echo $cat; else: ''; endif; ?></p>
+										<p class="title"><?php the_title(); ?></p>
+										<time datetime="<?php $d = get_the_date('Y-m-d'); echo $d; ?>"><?php $data = get_the_date('d F'); echo $data; ?></time>				
+									</div><!-- .row-info -->
+									<b class="arrow-bottom"></b><b class="arrow-top"></b>
+									<div class="row-img">
+										<?php
+											if ( has_post_thumbnail($id) ) {
+												echo get_the_post_thumbnail($id,'portofolio-thumb'); 
+											}
+										?>
+									</div>
+									<div class="hover">
+										<p class="category"><?php if(isset($cat) && $cat != ''): echo $cat; else: ''; endif; ?></p>
+										<p class="title"><?php the_title(); ?></p>
+										<p class="text">
+											<?php echo substr(get_the_content(),0,100)."[...]"; ?>
+										</p>
+									</div><!-- .hover -->
+								</a>
+								
+								<?php
+									$hover_link1 = get_post_meta($id, 'hover_link1');
+									$hover_link2 = get_post_meta($id, 'hover_link2');
+									
+									if(isset($hover_link1[0]) && $hover_link1[0] != ''):
+										echo '<a href="'.$hover_link1[0].'" class="link-icon icon-search" title="'.__('Search','foliogine').'"></a>';
+									else:	
+										echo '<a href="#" class="link-icon icon-search" title="'.__('Search','foliogine').'"></a>';
+									endif;
+									
+									if(isset($hover_link2[0]) && $hover_link2[0] != ''):
+										echo '<a href="'.$hover_link2[0].'" class="link-icon icon-link" title="'.__('Search','foliogine').'"></a>';
+									else:	
+										echo '<a href="#" class="link-icon icon-link" title="'.__('Link','foliogine').'"></a>';
+									endif;
+								?>
+							</div><!-- .item-box -->
+							<?php
+						endwhile;
+					endif;
+					wp_reset_query(); 
 				endif;
-				wp_reset_query(); 
-			endif;
+			endif;	
 			?>
 			</div>
 
