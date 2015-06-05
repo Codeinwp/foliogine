@@ -1,5 +1,13 @@
 
 
+### 1.1.2 - 05/06/2015
+
+ Changes: 
+
+
+ * Fixed #18, misspelling in multiple places
+
+
 ### 1.1.1 - 23/04/2015
 
  Changes: 
