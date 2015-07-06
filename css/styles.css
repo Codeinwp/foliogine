@@ -46,6 +46,7 @@ section.featured-img{
 	background-image: url("../img/slider-bg.jpg");
 	background-repeat: no-repeat;
 	background-color: #060a0d;
+	background-size: cover;
 }
 
 /***
