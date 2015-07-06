@@ -46,19 +46,8 @@ section.featured-img{
 	background-image: url("../img/slider-bg.jpg");
 	background-repeat: no-repeat;
 	background-color: #060a0d;
-	}
+}
 
-/* homepage image on screen ( slider area ) */
-.screen a.img-on-screen{
-	/*background-image: url(../img/img-on-screen.jpg);*/
-	}
-
-/* image on screen ( latest work area ) */
-section.latest-work .screen a.img-on-screen{
-	/*background-image: url(../img/img-on-screen-latest-work.jpg);*/
-	}
-
-	
 /***
  Home page
 ---------------------------------*/	
@@ -802,30 +791,7 @@ section.work .item-box .row-img{
 	box-shadow: inset #FFF -1px 0 0 0;
 */
 	}
-.work-img1{	
-	background: url(../img/work-img1.png);	
-	}
-.work-img2{	
-	background: url(../img/work-img2.png);	
-	}
-.work-img3{	
-	background: url(../img/work-img3.png);	
-	}
-.work-img4{	
-	background: url(../img/work-img4.png);	
-	}
-.work-img5{	
-	background: url(../img/work-img5.png);	
-	}
-.work-img6{	
-	background: url(../img/work-img6.png);	
-	}
-.work-img7{	
-	background: url(../img/work-img7.png);	
-	}
-.work-img8{	
-	background: url(../img/work-img8.png);	
-	}
+
 section.work .bottom .row-info{
 	-moz-box-shadow: inset #FFF -1px -1px 0 0;
 	-webkit-box-shadow: inset #FFF -1px -1px 0 0;
@@ -1663,14 +1629,7 @@ div.line-yellow{
 .special-content{
 	width: 100%;
 	float: left;
-	margin-top: 10px;s
-}
-.special-content .img{
-	width: 45%;
-	min-height: 240px;
-	float: left;
-	background: url(../img/img-special-content.png) no-repeat;
-	background-position: left center;
+	margin-top: 10px;
 }
 .special-content .content{
 	float: left;
