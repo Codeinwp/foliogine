@@ -55,7 +55,6 @@ section.featured-img{
 section.slider{ 
 	height: 450px;
 	background-position: center;
-	background-size: auto 100%;
 	}
 section.slider .container{ 
 	position: relative;
@@ -533,7 +532,6 @@ section.testimonials{
 	position: relative;
 	margin-top: 10px;
 	background-position: center;
-	background-size: auto 100%;
 	}
 .testimonials .container{ 
 	position: relative;
