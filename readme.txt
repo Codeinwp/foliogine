@@ -107,3 +107,4 @@ The exceptions to this license are as follows:
 	
 	slider-bg.jpg, img-on-screen.jpg: https://download.unsplash.com/reserve/vZZ0oqfTQ7Glod5qJs9g_DSC_0180.jpg
 	
+	screen.png: https://download.unsplash.com/photo-1435058492117-693a295a2ebc
