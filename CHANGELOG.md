@@ -1,5 +1,14 @@
 
 
+### 1.1.3 - 07/07/2015
+
+ Changes: 
+
+
+ * Replaced non gpl images and removed unused images
+ * Replaced images with darker ones and replaced screen image with gpl one
+
+
 ### 1.1.3 - 05/06/2015
 
  Changes: 
